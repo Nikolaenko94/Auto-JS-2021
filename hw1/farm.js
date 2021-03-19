@@ -11,8 +11,8 @@ function rabbitsBusiness(totalRabbits,totalMonth){
             totalRabbitsNumber = totalRabbitsNumber - (totalRabbitsNumber * 20 / 100);
         };
         totalRabbitsNumber+=20;
-        totalEveryMonth.push(monthArray[i] + ` - ${Math.round(totalRabbitsNumber)} rabbits`);
-        totalRabbitsNumber = Math.round(totalRabbitsNumber);
+        totalEveryMonth.push(monthArray[i] + ` - ${Math.floor(totalRabbitsNumber)} rabbits`);
+        totalRabbitsNumber = Math.floor(totalRabbitsNumber);
     }
     
     let returnVarriable = String(totalRabbitsNumber) + " - total rabbits" + `\n` + totalEveryMonth.join();
