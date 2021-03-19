@@ -18,3 +18,6 @@ function rabbitsBusiness(totalRabbits,totalMonth){
     let returnVarriable = String(totalRabbitsNumber) + " - total rabbits" + `\n` + totalEveryMonth.join();
     return returnVarriable;
 };
+
+//EXPORT function rabbitsBusiness() => use into ../index.js
+module.exports = rabbitsBusiness;
