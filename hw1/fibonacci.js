@@ -19,3 +19,6 @@ function fibonacci(fiboNumber){
    return String(boxForNumbers) + `\nTotal numbers - ${boxForNumbers.length -1}`;
 };
 
+//EXPORT function fibonacci() => use into ../index.js
+module.exports = fibonacci;
+
