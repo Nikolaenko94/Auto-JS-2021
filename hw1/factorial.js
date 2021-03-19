@@ -12,3 +12,5 @@ function factorial(number){
     return String(factorialNumber);
 };
 
+//EXPORT function factorial() => use into ../index.js
+module.exports = factorial;
