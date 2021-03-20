@@ -1,0 +1,20 @@
+{
+  "name": "autojs2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hw1" : "node ./hw1/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikolaenko94/Auto-JS-2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikolaenko94/Auto-JS-2021/issues"
+  },
+  "homepage": "https://github.com/Nikolaenko94/Auto-JS-2021#readme"
+}
