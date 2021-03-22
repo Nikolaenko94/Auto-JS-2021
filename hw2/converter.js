@@ -1,10 +1,12 @@
-function converter(array){
+
+globalThis.converter=function(array){
     let finalObject = {};
     let keyArray = [];
     let valueArray = [];   
-    array.forEach((element,index)  => {              
+    array.forEach((element,index)  => {                      
        if(index%2 === 0 || index ===0){
-           keyArray.push(array[index]);
+        keyArray.push(array[index]);
+        
        }else{
            valueArray.push(array[index]);
        }
