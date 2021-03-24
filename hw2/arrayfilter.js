@@ -49,7 +49,19 @@ function citySearch(city,array){
     return filterArray;
 };
 
+// TAKS 2.2
+function ageSearch(age,array){    
+    let filterArray = [];
+    array.forEach((element)  => {                      
+        element.age <= age? filterArray.push(element):false;
+     });
+    return filterArray;
+};
+
+
+//EXPORT
 module.exports = {
     students,
-    citySearch
+    citySearch,
+    ageSearch,
 };
