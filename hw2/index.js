@@ -20,4 +20,5 @@ console.log("==============T2.3");
 console.log(arrayFilter.alphabeticalNameSort(arrayFilter.students));
 console.log("==============T2.4");
 console.log(arrayFilter.marriedStatusFilter(true,"Female",arrayFilter.students));
-
+console.log("==============T2.5");
+console.log(arrayFilter.ageAndSexFilter(23,"Female",arrayFilter.students));

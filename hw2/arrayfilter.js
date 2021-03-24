@@ -60,16 +60,21 @@ function ageSearch(age,array){
 
 //TASK 2.3
 function alphabeticalNameSort(array){
-    filterArray = array.map(element => element.name);
+    let filterArray = array.map(element => element.name);
     filterArray.sort();
     return filterArray;
 };
 
-//TAKS 2.4
-function marriedStatusFilter(boolean, sex, array){
-           
+//TASK 2.4
+function marriedStatusFilter(boolean, sex, array){           
     let marriedStatusFulter = array.filter(element => element.sex === sex && element.isMarried === boolean);
     return marriedStatusFulter;
+};
+
+//TASK 2.5
+function ageAndSexFilter(age,sex,array){
+    let ageAndSexFilter = array.filter(element => element.age === age && element.sex === sex);
+    return ageAndSexFilter;
 };
 
 
@@ -80,4 +85,5 @@ module.exports = {
     ageSearch,
     alphabeticalNameSort,
     marriedStatusFilter,
+    ageAndSexFilter,
 };
