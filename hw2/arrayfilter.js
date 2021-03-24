@@ -84,7 +84,13 @@ const addNewStudent = (newStudent,array) => {
 };
 
 //TASK 2.7
-
+function uniqueCities(array){
+    let cities = [];
+    array.forEach((element)  => {                      
+        cities.includes(element.city)? false : cities.push(element.city);
+     });
+    return cities;
+};
 
 //EXPORT
 module.exports = {
@@ -95,4 +101,5 @@ module.exports = {
     marriedStatusFilter,
     ageAndSexFilter,
     addNewStudent,
+    uniqueCities,
 };
