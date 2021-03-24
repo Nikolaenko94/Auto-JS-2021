@@ -42,3 +42,9 @@ const students = [
         city: 'Grodno',
     },
 ];
+
+// TASK 2.1
+function citySearch(city,array){
+    let filterArray = array.filter(element => element.city === city);
+    return filterArray;
+};
