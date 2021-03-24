@@ -22,3 +22,5 @@ console.log("==============T2.4");
 console.log(arrayFilter.marriedStatusFilter(true,"Female",arrayFilter.students));
 console.log("==============T2.5");
 console.log(arrayFilter.ageAndSexFilter(23,"Female",arrayFilter.students));
+console.log("==============T2.6");
+console.log(arrayFilter.addNewStudent({name: 'Stanislav Nikolaenko',age: 26,sex: 'Male',isMarried: true,city: 'Mogilev',},arrayFilter.students));

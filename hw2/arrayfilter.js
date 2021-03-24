@@ -77,6 +77,14 @@ function ageAndSexFilter(age,sex,array){
     return ageAndSexFilter;
 };
 
+//TASK 2.6
+const addNewStudent = (newStudent,array) => {
+    array.unshift(newStudent)
+    return array;
+};
+
+//TASK 2.7
+
 
 //EXPORT
 module.exports = {
@@ -86,4 +94,5 @@ module.exports = {
     alphabeticalNameSort,
     marriedStatusFilter,
     ageAndSexFilter,
+    addNewStudent,
 };
