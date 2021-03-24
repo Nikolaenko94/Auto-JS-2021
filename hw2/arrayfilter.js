@@ -65,6 +65,13 @@ function alphabeticalNameSort(array){
     return filterArray;
 };
 
+//TAKS 2.4
+function marriedStatusFilter(boolean, sex, array){
+           
+    let marriedStatusFulter = array.filter(element => element.sex === sex && element.isMarried === boolean);
+    return marriedStatusFulter;
+};
+
 
 //EXPORT
 module.exports = {
@@ -72,4 +79,5 @@ module.exports = {
     citySearch,
     ageSearch,
     alphabeticalNameSort,
+    marriedStatusFilter,
 };
