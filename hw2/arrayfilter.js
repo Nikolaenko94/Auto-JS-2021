@@ -48,3 +48,8 @@ function citySearch(city,array){
     let filterArray = array.filter(element => element.city === city);
     return filterArray;
 };
+
+module.exports = {
+    students,
+    citySearch
+};
