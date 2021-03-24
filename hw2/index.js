@@ -16,4 +16,6 @@ console.log("==============T2.1");
 console.log(arrayFilter.citySearch('Minsk',arrayFilter.students));
 console.log("==============T2.2");
 console.log(arrayFilter.ageSearch(20,arrayFilter.students));
+console.log("==============T2.3");
+console.log(arrayFilter.alphabeticalNameSort(arrayFilter.students));
 

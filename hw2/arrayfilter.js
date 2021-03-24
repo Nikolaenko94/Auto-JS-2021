@@ -1,6 +1,6 @@
 const students = [
     {
-        name: 'Vasya Pupkin',
+        name: 'Sasya Pupkin',
         age: 17,
         sex: 'Male',
         isMarried: false,
@@ -49,12 +49,19 @@ function citySearch(city,array){
     return filterArray;
 };
 
-// TAKS 2.2
+// TASK 2.2
 function ageSearch(age,array){    
     let filterArray = [];
     array.forEach((element)  => {                      
         element.age <= age? filterArray.push(element):false;
      });
+    return filterArray;
+};
+
+//TASK 2.3
+function alphabeticalNameSort(array){
+    filterArray = array.map(element => element.name);
+    filterArray.sort();
     return filterArray;
 };
 
@@ -64,4 +71,5 @@ module.exports = {
     students,
     citySearch,
     ageSearch,
+    alphabeticalNameSort,
 };
