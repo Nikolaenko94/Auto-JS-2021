@@ -79,8 +79,10 @@ function ageAndSexFilter(age,sex,array){
 
 //TASK 2.6
 const addNewStudent = (newStudent,array) => {
-    array.unshift(newStudent)
-    return array;
+    let newArray = [];
+    newArray = newArray.concat(array);
+    newArray.unshift(newStudent)
+    return newArray;
 };
 
 //TASK 2.7
