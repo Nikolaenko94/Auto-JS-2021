@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "hw1" : "node ./hw1/index.js"
+    "hw1" : "node ./hw1/index.js",
+    "hw3": "node ./hw3/index.js"
   },
   "repository": {
     "type": "git",
