@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "hw1" : "node ./hw1/index.js",
-    "hw3": "node ./hw3/index.js"
+    "hw2" : "node ./hw2/index.js",
+    "hw3" : "node ./hw3/index.js"
   },
   "repository": {
     "type": "git",
