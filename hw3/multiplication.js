@@ -4,9 +4,7 @@ function makeMultiplication(){
     return counter *= number;
   }  
 };
-
 const multi = makeMultiplication();
-
 
 module.exports = {
     makeMultiplication,

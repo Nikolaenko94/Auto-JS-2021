@@ -1,6 +1,7 @@
 function Card(name, newCardBalance){          
     this.name = name;
-    isNaN(newCardBalance)?newCardBalance=0:true;       
+    isNaN(newCardBalance)?newCardBalance=0:true;
+    this.name?true:this.name="Anonim Card";       
     // chekcBalance function    
     this.checkBalance = function (){        
         return newCardBalance;
