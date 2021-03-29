@@ -27,8 +27,6 @@ function Card(name, newCardBalance){
     };    
 };
 
-let NikolaenkoCard = new Card(process.env.USERNAME,20);
 module.exports = {
     Card,
-    NikolaenkoCard,
 };
