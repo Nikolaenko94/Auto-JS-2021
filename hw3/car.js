@@ -44,13 +44,11 @@ let Car = (function(){
         },
 
         //second public function
-        refill(litters){
-            isNaN(litters)?litters=0:true;            
-            myFuel += GasolineStation.refuel(litters);
+        refill(GasolineStation){            
+            if(isNaN(GasolineStation)){GasolineStation = 0};            
+            myFuel += GasolineStation;
             //if there is not enough space in the tank
-            if(myFuel > tank){
-                myFuel = 50;
-            }
+            if(myFuel > tank){myFuel = 50};
             return myFuel;            
         },
     }
@@ -64,10 +62,10 @@ let GasolineStation = (function (){
     }
 })();
 //GASLINESTATIONS
-const BelarusNeft1 = 10;
-const BelarusNeft2 = 5;
-const Lucoil = 10;
-const SlavNeft = 5;
+const BelarusNeft1 = GasolineStation.refuel(15);
+const BelarusNeft2 = GasolineStation.refuel(0);
+const Lucoil = GasolineStation.refuel(20);
+const SlavNeft = GasolineStation.refuel(0);
 
 //EXPORT
 module.exports = {
