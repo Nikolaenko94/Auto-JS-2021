@@ -6,7 +6,6 @@ function makeMultiplication(){
 };
 const multi = makeMultiplication();
 
-module.exports = {
-    makeMultiplication,
+module.exports = {    
     multi,        
 };
