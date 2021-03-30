@@ -38,9 +38,8 @@ class Card {
             }
             return this.#balance * summ;
         }catch(transferBalance){
-            return ("addBalance Error: " + transferBalance.message);
+            return ("transferBalance Error: " + transferBalance.message);
         };       
-                
     };    
 };
 //EXPORT 
