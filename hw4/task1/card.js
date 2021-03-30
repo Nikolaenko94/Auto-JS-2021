@@ -8,12 +8,28 @@ class Card {
         return `Balance: ${this.#balance}`
     }
     addBalance(summ){
-        if(summ <= 0 || isNaN(summ) || typeof summ === "boolean"){
-            return `You entered an invalid value. Please try again.`;
-        }
-        this.#balance += summ;
-        return `amount of ${summ} added to the account`;        
+        try{            
+            if(summ <= 0 || isNaN(summ) || typeof summ === "boolean"){
+                throw new SyntaxError ("You entered an invalid value. Please try again.");
+            }
+            this.#balance += summ;
+        } catch(addBalance){
+            return ("addBalance Error: " + addBalance.message);
+        };       
+                
     }
+    offBalance(summ){  
+       try{
+            if(this.typeOfCard === "debit"){
+                if(summ > this.#balance){
+                    throw new Error ("You entered an invalid value. Please try again.");
+                }             
+            }; 
+            this.#balance -= summ;
+        }catch(offBalance){
+            return ("offBalance Error: " + offBalance.message);
+            }; 
+    };
 };
 
 module.exports = {
