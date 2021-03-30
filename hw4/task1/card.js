@@ -31,7 +31,7 @@ class Card {
     };
     transferBalance(summ){
         try{            
-            if(summ <= 0 || isNaN(summ) || typeof summ === "boolean"){
+            if(summ <= 0 || isNaN(summ) || typeof summ === "boolean" || typeof summ === "string"){
                 throw new SyntaxError ("You entered an invalid value. Please try again.");
             }
             return this.#balance * summ;
