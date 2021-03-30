@@ -8,8 +8,7 @@
     "hw2": "node ./hw2/index.js",
     "hw3": "node ./hw3/index.js",
     "test": "jest",
-    "hw4": "node ./hw4/index.js",
-    "test.hw4": "jest"
+    "hw4": "node ./hw4/index.js"
   },
   "repository": {
     "type": "git",
