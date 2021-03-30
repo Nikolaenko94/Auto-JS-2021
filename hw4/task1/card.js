@@ -19,7 +19,9 @@ class Card {
     };
     offBalance(summ){  
        try{
-            if(this.typeOfCard === "debit"){
+        if(summ <= 0 || isNaN(summ) || typeof summ === "boolean" || typeof summ === "string"){
+            throw new SyntaxError ("You entered an invalid value. Please try again.");
+        }else if(this.typeOfCard === "debit"){
                 if(summ > this.#balance){
                     throw new Error ("You entered an invalid value. Please try again.");
                 }             
