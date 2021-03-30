@@ -1,10 +1,13 @@
-class Card {
-    constructor(nameUser, typeOfCard, balance){
+class Card {  
+    #balance = 0;  
+    constructor(nameUser, typeOfCard){
         this.nameUser = nameUser;        
-        this.typeOfCard = typeOfCard;
-        this.balance = balance;
+        this.typeOfCard = typeOfCard;                      
     }
-
+    getBalance(){
+        return `Balance: ${this.#balance}`
+    }
+    
 };
 
 module.exports = {
