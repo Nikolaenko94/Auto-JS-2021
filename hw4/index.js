@@ -1,5 +1,7 @@
 //import task1
 let card = require("./task1/card");
+//import task2
+let pizza = require("./task2/pizza");
 
 //usage task1
 console.log("==================TASK 1===============");
@@ -18,3 +20,29 @@ CreditCard.addBalance(500);
 console.log(CreditCard.getBalance());
 CreditCard.offBalance(1000);
 console.log(CreditCard.getBalance());
+//usage task2
+console.log("==================TASK 2===============");
+let myPizza = new pizza.Pizza("small");
+console.log(myPizza.size + " size my pizza");
+console.log(myPizza.callories + " callories my pizza");
+console.log(myPizza.price + " price my pizza");
+console.log("add greens into my pizza");
+myPizza.addTopping("greens");
+console.log(myPizza.isVegan + " my pizza vegan");
+console.log(myPizza.callories + " callories my pizza");
+console.log(myPizza.price + " price my pizza");
+console.log("add meet into my pizza");
+myPizza.addTopping("meet");
+console.log(myPizza.isVegan + " my pizza NOTvegan");
+console.log(myPizza.callories + " callories my pizza");
+console.log(myPizza.price + " price my pizza");
+console.log("remove meet into my pizza");
+myPizza.removeTopping("meet");
+console.log(myPizza.isVegan + " my pizza vegan");
+console.log(myPizza.callories + " callories my pizza");
+console.log(myPizza.price + " price my pizza");
+console.log("change size my pizza");
+myPizza.changeSize("big");
+console.log(myPizza.size + " size my pizza");
+console.log(myPizza.callories + " callories my pizza");
+console.log(myPizza.price + " price my pizza");
