@@ -1,4 +1,4 @@
-class Track {
+class Track {    
     constructor(name, seconds, albom, singer, explicit){
         this.name = name;
         this.seconds = seconds;
