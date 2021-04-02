@@ -7,9 +7,9 @@ const car = require("./car");
 
 // usage task 1
 console.log("====================TASK 1 ==================");
-console.log(multiplication.multi(3));
-console.log(multiplication.multi(5));
-console.log(multiplication.multi(2));
+const mul3 = multiplication.multi(3);
+const mul15 =mul3(5);
+console.log(mul15(2));
 // usage task 2
 console.log("====================TASK 2 ==================");
 let NikolaenkoCard = new cardCreating.Card(process.env.USERNAME,20);
