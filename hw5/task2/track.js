@@ -6,6 +6,10 @@ class Track {
         this.singer = singer;
         this.explicit = explicit;
     };
+    duration(){
+        return this.seconds;
+    }
+
 };
 
 module.exports  = {
