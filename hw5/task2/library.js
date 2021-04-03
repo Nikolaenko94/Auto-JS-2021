@@ -88,7 +88,7 @@ class Library{
             this.Artist.splice(index,1);               
          };         
     };
-    
+
 // UPDATE METHOD
     update(myElement, argument, value ){
                     //TRACK
@@ -114,7 +114,22 @@ class Library{
                 }
             });            
         }        
-    }    
+    }
+    
+//PLAY METHOD
+    play(){        
+        let current = 0; 
+        let myTracks = this.Track;             
+        let mainInterval= setInterval(function(){ 
+            console.log(myTracks[current+1].name)            
+            current++;
+            if(current + 1 >= myTracks.length){
+                current = 0;
+                clearTimeout(mainInterval);
+            }             
+        }, myTracks[current].seconds*1000);
+        return myTracks[current].name;
+    };    
 };
 module.exports = {
     Library,    
