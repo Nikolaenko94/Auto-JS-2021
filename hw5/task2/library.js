@@ -117,18 +117,35 @@ class Library{
     }
     
 //PLAY METHOD
-    play(){        
+    play(){ 
+        const EventEmitter = require('events');
+        const player = new EventEmitter();              
         let current = 0; 
-        let myTracks = this.Track;             
-        let mainInterval= setInterval(function(){ 
-            console.log(myTracks[current+1].name)            
+        let myTracks = this.Track;
+        let strInfo = `${myTracks[current].name}, Duration: ${myTracks[current].seconds}`;           
+        this.nextTrack = function(){player.once('next', ()=>{
+            if(current + 1 >= myTracks.length){ 
+                current = 0;                
+            }
+            else{
+                current++;                            
+            }   
+                       
+        })};   
+           
+        let mainInterval= setInterval(function(){
+            player.emit('next');                                   
+            console.log(`${myTracks[current+1].name}, Duration: ${myTracks[current+1].seconds}`);
             current++;
             if(current + 1 >= myTracks.length){
                 current = 0;
-                clearTimeout(mainInterval);
-            }             
+                clearInterval(mainInterval);
+            }                                     
         }, myTracks[current].seconds*1000);
-        return myTracks[current].name;
+        return strInfo;
+    };
+    next(){
+        this.nextTrack();
     };    
 };
 module.exports = {
