@@ -1,3 +1,5 @@
+const { setImmediate, setInterval } = require('timers');
+
 class Library{    
     Track = [];
     Album = [];
@@ -153,8 +155,8 @@ class Library{
         let mainInterval= setInterval(function(){
             player.emit('next');
             player.emit('prev');
-            player.emit('pause');                                                        
-            console.log(`${myTracks[current+1].name}, Duration: ${myTracks[current+1].seconds}`);
+            player.emit('pause');                                                                                      
+            console.log(`${myTracks[current+1].name}, Duration: ${myTracks[current+1].seconds}`);            
             current++;
             if(current + 1 >= myTracks.length){
                 current = 0;
