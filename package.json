@@ -10,6 +10,7 @@
     "test": "jest",
     "hw4" : "node ./hw4/index.js",
     "hw5" : "node ./hw5/index.js"
+
   },
   "repository": {
     "type": "git",
