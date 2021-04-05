@@ -5,36 +5,38 @@ class Library{
     Album = [];
     Artist = [];
  // ADD METHOD WITH NESTINGS   
-    add(){ 
+    add(...args){ 
     //    value.constuctor.name; - return Class name "Track,Artist,Album";
     //    value.name - return class.name "Linkin park exemple";
     // IF :for classes! if one value - this CLASS. if more value: first - Class, nexts - parameters this Class;
-    //ELSE: For class parameters. If we have more then one parameters = > [new Class,...parametrs for this class ];  
-                            // TRACK
-            if(arguments[0].constructor.name === "Track"){
-                if(arguments.length === 1){
-                    this.Track.push(arguments[0]);
+    //ELSE: For class parameters. If we have more then one parameters = > [new Class,...parametrs for this class ];
+        let myArguments = [];
+        myArguments.push(...args);        
+                            // TRACK                            
+            if(myArguments[0].constructor.name === "Track"){
+                if(myArguments.length === 1){
+                    this.Track.push(myArguments[0]);                    
                 }
                 //FOR TRACK WE DON'T HAVE NECESSARY ADD ADDITIONAL PARAMETERS. IT'S NOT LOGICAL
                 else{ return "Pls using update for Track." }      
             };
 
                             // ALBUM
-            if(arguments[0].constructor.name === "Album"){
-                if(arguments.length === 1){
-                    this.Album.push(arguments[0]);
+            if(myArguments[0].constructor.name === "Album"){
+                if(myArguments.length === 1){
+                    this.Album.push(myArguments[0]);
                 }
                 else{
                     this.Album.forEach(element => {
-                        if(element === arguments[0]){
-                            for(let i = 1; i < arguments.length; i++){
-                                if(Array.isArray(arguments[i])){
-                                    if(arguments[i][i-1].constructor.name === "Track" ){                                                                                             
-                                        element.traks = element.traks.concat(arguments[i]);
+                        if(element === myArguments[0]){
+                            for(let i = 1; i < myArguments.length; i++){
+                                if(Array.isArray(myArguments[i])){
+                                    if(myArguments[i][i-1].constructor.name === "Track" ){                                                                                             
+                                        element.traks = element.traks.concat(myArguments[i]);
                                     }                                 
                                 }
-                                if(arguments[i].constructor.name === "Track"){
-                                        element.traks.push(arguments[i]);
+                                if(myArguments[i].constructor.name === "Track"){
+                                        element.traks.push(myArguments[i]);
                                 }                           
                             }
                         } 
@@ -42,27 +44,27 @@ class Library{
                 }         
             };
                                 //ARTIST
-            if(arguments[0].constructor.name === "Artist"){
-                if(arguments.length === 1){
-                    this.Artist.push(arguments[0]);
+            if(myArguments[0].constructor.name === "Artist"){
+                if(myArguments.length === 1){
+                    this.Artist.push(myArguments[0]);
                 }
                 else{
                     this.Artist.forEach(element => {
-                        if(element === arguments[0]){
-                            for(let i = 1; i < arguments.length; i++){
-                                if(Array.isArray(arguments[i])){
-                                    if(arguments[i][i-1].constructor.name === "Track" ){                                                                                             
-                                        element.traks = element.traks.concat(arguments[i]);
+                        if(element === myArguments[0]){
+                            for(let i = 1; i < myArguments.length; i++){
+                                if(Array.isArray(myArguments[i])){
+                                    if(myArguments[i][i-1].constructor.name === "Track" ){                                                                                             
+                                        element.traks = element.traks.concat(myArguments[i]);
                                     }
-                                    if(arguments[i][i-1].constructor.name === "Album"){
-                                        element.albums = element.albums.concat(arguments[i]);
+                                    if(myArguments[i][i-1].constructor.name === "Album"){
+                                        element.albums = element.albums.concat(myArguments[i]);
                                     }                                 
                                 }
-                                if(arguments[i].constructor.name === "Track"){
-                                        element.traks.push(arguments[i]);
+                                if(myArguments[i].constructor.name === "Track"){
+                                        element.traks.push(myArguments[i]);
                                 }
-                                if(arguments[i].constructor.name === "Album"){
-                                    element.albums.push(arguments[i]);
+                                if(myArguments[i].constructor.name === "Album"){
+                                    element.albums.push(myArguments[i]);
                                 }
                                                          
                             }
