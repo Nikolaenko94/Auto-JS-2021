@@ -1,5 +1,5 @@
 class Album {
-    constructor(name, data, singer, traks){
+    constructor(name, data, traks, singer){
         this.name = name;
         this.data = data;
         this.traks = traks;

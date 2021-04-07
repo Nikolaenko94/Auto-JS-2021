@@ -13,14 +13,19 @@ console.log(calculator.funcInput);
 setTimeout(() => {
 console.log("==================TASK 2===============");
 let library = new Library.Library;
-let InTheEnd = new track.Track("In the End", 5, "HybridTheory", "Linkin Park", false);
-let Papercut = new track.Track("Papercut", 4, "Hybrid Theory", "Linkin Park", false);
-let HybridTheory = new album.Album("Hybrid Theory", new Date("2000-10-24"), "Linkin Park", [InTheEnd, Papercut]);
+let InTheEnd = new track.Track("In the End", 5, false);
+let Papercut = new track.Track("Papercut", 4, false);
+let HybridTheory = new album.Album("Hybrid Theory", new Date("2000-10-24"), [InTheEnd, Papercut]);
 let LinkinPark = new artist.Artist("Linkin Park", new Date("1996-01-01"), [HybridTheory],[InTheEnd, Papercut]);
-let newTrack = new track.Track("newTrack", 3, "HybridTheory", "Linkin Park", false);
-let newTrack2 = new track.Track("newTrack2", 3, "HybridTheory", "Linkin Park", false);
-let newAlbum = new album.Album("newAlbum", new Date("2000-10-24"), "Linkin Park", [InTheEnd, Papercut]);
-let newAlbum2 = new album.Album("newAlbum2", new Date("2000-10-24"), "Linkin Park", [InTheEnd, Papercut]);
+let newTrack = new track.Track("newTrack", 3, false, HybridTheory, LinkinPark);
+let newTrack2 = new track.Track("newTrack2", 3, false, HybridTheory, LinkinPark);
+
+InTheEnd.albom = HybridTheory;
+InTheEnd.singer = LinkinPark;
+Papercut.albom = HybridTheory;
+Papercut.singer = LinkinPark;
+HybridTheory.singer = LinkinPark;
+
 library.add(InTheEnd);
 library.add(Papercut);
 library.add(newTrack);
