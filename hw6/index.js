@@ -6,6 +6,7 @@ const Library = require("./task1/library");
 // import task 2
 
 //usage task 1
+console.log("======================TASK 1========================");
 let library = new Library.Library;
 let InTheEnd = new track.Track("In the End", 5, "HybridTheory", "Linkin Park", false);
 let Papercut = new track.Track("Papercut", 4, "Hybrid Theory", "Linkin Park", false);
@@ -18,3 +19,4 @@ library.add(InTheEnd);
 library.add(Papercut);
 console.log(library.search("In the End"));
 //usage task 2
+console.log("======================TASK 2========================");
