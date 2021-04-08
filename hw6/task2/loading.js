@@ -33,37 +33,27 @@
 //         return loading(500);
 //     });
 
-//The second way
-asyncFn = function (){
-            setTimeout(() => {
-                console.clear();
-                console.log("|");        
-                setTimeout(() => {
-                    console.clear();
-                    console.log("/");            
-                    setTimeout(() => {
-                        console.clear();
-                        console.log("-");                
-                        setTimeout(() => {
-                            console.clear();
-                            console.log("\\");                    
-                        }, 500);
-                    }, 500);
-                }, 500);
-            }, 500);
-}
-
+//The second way 
+let i =0 ; 
+const asyncFn = function(){    
+            setTimeout(function() {
+            let symbols = ["|","/","-","\\"];   
+            console.clear();
+            console.log(symbols[i]);
+            i++;
+            if(i === symbols.length){return}
+            asyncFn();   
+}, 500);
+};
 
 const loading = (func) => new Promise(
     (resolve) => setTimeout(() => {
         console.clear();
         console.log("I replace loading symbols");
-    }, 3000)
+    }, 2500)
 );
-
-
 
 module.exports = {
     loading,
-    asyncFn,
+    asyncFn,   
 };
