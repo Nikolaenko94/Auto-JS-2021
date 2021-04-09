@@ -181,41 +181,11 @@ class Library{
         this.pauseTrack();
     };
     search(value){
-        const arrForSearch = this.Track.concat(this.Artist, this.Album);
-        let arrForFilter = [];
-        let arrFinaly = [];        
-        arrForSearch.forEach((element)=>{
-            let arrParsingEl = [];
-            arrParsingEl = Object.entries(element);
-            arrParsingEl.forEach((el1)=>{
-                if(el1.includes(value)){
-                    arrFinaly.push(element);                                       
-                }else{                    
-                    arrForFilter = arrForFilter.concat(el1);  
-                    if(arrForFilter.includes(value)){
-                        arrFinaly.push(element); 
-                    }else{
-                        arrForFilter.forEach((el2)=>{
-                            if(Array.isArray(el2)){
-                                el2.forEach((el3)=>{
-                                   let arrPars2 =[];
-                                   arrPars2 = Object.entries(el3);
-                                   arrPars2.forEach((el4)=>{
-                                       if(el4.includes(value)){
-                                        arrFinaly.push(element);
-                                       }
-                                   })
-                                });
-                            };
-                        });
-                    }
-                };      
-            });                
-        }); 
-        // filter if we have coincidences
-        arrFinaly = [...new Set(arrFinaly)];
+        const arrForSearch = this.Track.concat(this.Artist, this.Album);        
+        let arrFinaly = arrForSearch.filter((element)=>{               
+               return Object.values(element).includes(value);
+        });
         return arrFinaly;
-        
     }    
 };
 
