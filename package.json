@@ -10,7 +10,8 @@
     "test": "jest",
     "hw4" : "node ./hw4/index.js",
     "hw5" : "node ./hw5/index.js",
-    "hw6" : "node ./hw6/index.js"
+    "hw6" : "node ./hw6/index.js",
+    "hw7" : "node ./hw7/index.js"
 
   },
   "repository": {
