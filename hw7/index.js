@@ -1,10 +1,11 @@
 //import task 1 
 const { StringBuilder } = require('./task1/stringBuilder');
 //import task 2
-const album = require("./task1/album");
-const track = require("./task1/track");
-const artist = require("./task1/artist");
-const Library = require("./task1/library");
+const Library = require("./task2/library");
+const album = require("./task2/album");
+const track = require("./task2/track");
+const artist = require("./task2/artist");
+const fabric = require('./task2/fabric');
 
 //usage task 1
 console.log("===============TASK 1================");
@@ -18,6 +19,18 @@ console.log(hellobuilder.toString());
 //usage task2
 console.log("===============TASK 2================");
 let library = new Library.Library;
+const factory = new fabric.Create;
+const fabricArtist = factory.create('artist');
+const fabricTrack = factory.create('track');
+const fabricAlbum = factory.create('album');
+//ex fabric method work
+fabricTrack.name = "Castle of Glass";
+fabricTrack.seconds = 7;
+fabricTrack.albom = album;
+fabricTrack.explicit = false;
+console.log("class creating prepared fabric pattern:")
+console.log(fabricTrack);
+
 let InTheEnd = new track.Track("In the End", 5, false);
 let Papercut = new track.Track("Papercut", 4, false);
 let HybridTheory = new album.Album("Hybrid Theory", new Date("2000-10-24"), [InTheEnd, Papercut]);
