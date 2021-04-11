@@ -1,6 +1,6 @@
 const { setImmediate, setInterval } = require('timers');
-
-class Library{    
+const repl = require('repl'); 
+class Library{        
     Track = [];
     Album = [];
     Artist = [];
@@ -10,9 +10,9 @@ class Library{
             return Library._instance
         }
         Library._instance = this;
-    }
+    }     
  // ADD METHOD WITH NESTINGS   
-    add(...args){ 
+    add(...args){        
     //    value.constuctor.name; - return Class name "Track,Artist,Album";
     //    value.name - return class.name "Linkin park exemple";
     // IF :for classes! if one value - this CLASS. if more value: first - Class, nexts - parameters this Class;
@@ -129,6 +129,7 @@ class Library{
     
 //PLAY METHOD
     play(){ 
+        
         const EventEmitter = require('events');
         const player = new EventEmitter();              
         let current = 0; 
@@ -142,7 +143,7 @@ class Library{
             else{
                 current++;                            
             }   
-                       
+                    
         })};
         //EventEmitter prev()    
         this.prevTrack = function(){player.once('prev', ()=>{
@@ -152,7 +153,7 @@ class Library{
             else{
                 current--;                            
             }   
-                       
+                    
         })};
         //EventEmitter pause()
         this.pauseTrack = function(){player.once('pause', ()=>{
@@ -176,15 +177,19 @@ class Library{
         mainInterval.ref();        
         //END EMITATION
         console.log("Play");
+        console.log(`${myTracks[current].name}, Duration: ${myTracks[current].seconds}`);
         return strInfo;
     };
     next(){
+        repl.start('Next music').context.next = this.nextTrack();
         this.nextTrack();
     };
     prev(){
+        repl.start('Prev music').context.prev = this.prevTrack();
         this.prevTrack();
     };
     pause(){
+        repl.start('Pause music').context.stop = this.pauseTrack();
         this.pauseTrack();
     };
     search(value){

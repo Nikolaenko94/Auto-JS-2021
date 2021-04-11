@@ -1,6 +1,7 @@
 //import task 1 
 const { StringBuilder } = require('./task1/stringBuilder');
 //import task 2
+const repl = require('repl');
 const Library = require("./task2/library");
 const album = require("./task2/album");
 const track = require("./task2/track");
@@ -50,7 +51,13 @@ library.add(Papercut);
 library.add(newTrack);
 library.add(newTrack2);
 library.add(fabricTrack);
+
 //DEMONSTRATION HOW WORK SINGLTON
 console.log("Singlton work")
 const newLibrary = new Library.Library;
 console.log(newLibrary);
+repl.start('Music is playing with REPL\n').context.play = library.play();
+repl.start('Music pause with REPL\n').context.pause = library.pause();
+repl.start('Music is playing with REPL\n').context.play = library.play();
+repl.start('Music next with REPL\n').context.next = library.next();
+repl.start('Music prev with REPL\n').context.prev = library.prev();
