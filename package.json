@@ -16,7 +16,8 @@
     "babel": "babel",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "commit": "cz"
+    "commit": "cz",
+    "prettier": "prettier ."
   },
   "repository": {
     "type": "git",
@@ -59,8 +60,8 @@
     },
     "lint-staged": {
       "*.js": [
-        "lint:fix",
-        "git add"       
+        "npm run lint:fix",
+        "git add"
       ]
     }
   }
