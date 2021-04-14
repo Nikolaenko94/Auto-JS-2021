@@ -4,7 +4,7 @@ const Library = require("./task1/library");
 const album = require("./task1/album");
 const track = require("./task1/track");
 const artist = require("./task1/artist");
-const fabric = require('./task1/fabric');
+const fabric = require("./task1/fabric");
 
 //usage task1
 console.log("===============TASK 1================");

@@ -3,14 +3,7 @@ const repl = require('repl');
 class Library{               
     Track = []; 
     Album = [];
-    Artist = [];   
-    //singlton realization fir Library
-    constructor(){
-        if(Library._instance){
-            return Library._instance
-        }
-        Library._instance = this;
-    }     
+    Artist = [];    
  // ADD METHOD WITH NESTINGS   
     add(...args){        
     //    value.constuctor.name; - return Class name "Track,Artist,Album";
