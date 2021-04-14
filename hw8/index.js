@@ -5,19 +5,15 @@ const album = require("./task1/album");
 const track = require("./task1/track");
 const artist = require("./task1/artist");
 const fabric = require("./task1/fabric");
+const player = require("./task1/player");
 
 //usage task1
 console.log("===============TASK 1================");
 const library = new Library.Library;
 const factory = new fabric.Create;
 const fabricTrack = factory.create('track');
-//ex fabric method work
-fabricTrack.name = "Castle of Glass";
-fabricTrack.seconds = 7;
-fabricTrack.albom = album;
-fabricTrack.explicit = false;
-console.log("class creating prepared fabric pattern:")
-console.log(fabricTrack);
+const myPlayer = new player.Player();
+const library2 = new Library.Library;
 
 let InTheEnd = new track.Track("In the End", 5, false);
 let Papercut = new track.Track("Papercut", 4, false);
@@ -38,13 +34,30 @@ library.add(Papercut);
 library.add(newTrack);
 library.add(newTrack2);
 library.add(fabricTrack);
+library2.add(InTheEnd);
+library2.add(newTrack2);
 
-//DEMONSTRATION HOW WORK SINGLTON
-console.log("Singlton work")
-const newLibrary = new Library.Library;
-console.log(newLibrary);
-repl.start('Music is playing with REPL\n').context.play = library.play();
-repl.start('Music pause with REPL\n').context.pause = library.pause();
-repl.start('Music is playing with REPL\n').context.play = library.play();
-repl.start('Music next with REPL\n').context.next = library.next();
-repl.start('Music prev with REPL\n').context.prev = library.prev();
+myPlayer.add(library);
+myPlayer.add(library2);
+const newMyPlayer = new player.Player();
+console.log("Check singleton myPlayer");
+console.log("Number of tracks in the player:");
+console.log(newMyPlayer.Tracks.length);
+function replPlay(){
+    repl.start('Music is playing with REPL\n').context.play = myPlayer.play();
+}
+function replPause() {
+    repl.start('Music pause with REPL\n').context.pause = myPlayer.pause();
+}
+function replNext() {
+    repl.start('Music next with REPL\n').context.next = myPlayer.next();
+}
+function replPrev() {
+    repl.start('Music prev with REPL\n').context.prev = myPlayer.prev();
+}
+
+replPlay();
+replPause();
+replPlay();
+replNext();
+replPrev();
