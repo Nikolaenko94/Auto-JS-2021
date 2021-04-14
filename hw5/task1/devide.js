@@ -5,11 +5,11 @@ function devide (first,second){
             let messageError = "Error: This line does not use a numbers";
             console.log(messageError);
             return messageError;
-        };
+        }
         console.log(Number(first) / Number(second));
         return  Number(first) / Number(second);
     }, 1100);
-};
+}
 
 module.exports = {
     devide,

@@ -1,29 +1,16 @@
-//import task 1 
-const { StringBuilder } = require('./task1/stringBuilder');
-//import task 2
+//import task 1
 const repl = require('repl');
-const Library = require("./task2/library");
-const album = require("./task2/album");
-const track = require("./task2/track");
-const artist = require("./task2/artist");
-const fabric = require('./task2/fabric');
+const Library = require("./task1/library");
+const album = require("./task1/album");
+const track = require("./task1/track");
+const artist = require("./task1/artist");
+const fabric = require('./task1/fabric');
 
-//usage task 1
+//usage task1
 console.log("===============TASK 1================");
-const hellobuilder = new StringBuilder('HH');
-hellobuilder.append('el')
-hellobuilder.append('lo')
-hellobuilder.delete(1,1)
-hellobuilder.build()         
-console.log(hellobuilder.toString());
-
-//usage task2
-console.log("===============TASK 2================");
 const library = new Library.Library;
 const factory = new fabric.Create;
-const fabricArtist = factory.create('artist');
 const fabricTrack = factory.create('track');
-const fabricAlbum = factory.create('album');
 //ex fabric method work
 fabricTrack.name = "Castle of Glass";
 fabricTrack.seconds = 7;

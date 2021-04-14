@@ -25,7 +25,7 @@ var Track = function () {
     return Track;
 }();
 
-;
+
 
 module.exports = {
     Track: Track

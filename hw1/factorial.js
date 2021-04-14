@@ -8,9 +8,9 @@ function factorial(number){
     let factorialNumber = 1n;    
     for(let i=0n;i<bigNumber;i++){        
         factorialNumber *= bigNumber -i;
-    };
+    }
     return String(factorialNumber);
-};
+}
 
 //EXPORT function factorial() => use into ../index.js
 module.exports = factorial;

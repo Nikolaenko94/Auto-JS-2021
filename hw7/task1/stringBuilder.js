@@ -14,7 +14,7 @@ class StringBuilder extends Builder{
     build(){
         return new StringBuilder(this);
     }
-};
+}
 
 module.exports = {
     StringBuilder,

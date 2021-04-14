@@ -1,9 +1,9 @@
 const { setImmediate, setInterval } = require('timers');
 const repl = require('repl'); 
-class Library{        
-    Track = [];
+class Library{               
+    Track = []; 
     Album = [];
-    Artist = [];
+    Artist = [];   
     //singlton realization fir Library
     constructor(){
         if(Library._instance){

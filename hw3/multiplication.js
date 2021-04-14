@@ -4,7 +4,7 @@ function multi(num){
     }
     numberN.valueOf = function() { return num; };    
     return numberN;
-  };
+  }
 
 module.exports = {    
     multi,        

@@ -11,7 +11,7 @@ var Artist = function Artist(name, data, albums, traks) {
     this.traks = traks;
 };
 
-;
+
 
 module.exports = {
     Artist: Artist

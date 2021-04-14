@@ -17,11 +17,11 @@ let Car = (function(){
                 //if trip done                      
                 if(i === distance){
                     return("Вы прибыли на место назначения");
-                };
+                }
                 //if fuel off 
                 if(myFuel - consumptionEveryKm <=0){
                     return(`ВНИМАНИЕ: закончилось топливо, вы проехали: ${doneDistance} км.`);
-                };               
+                }               
                 //use distance for fuel station
                     //gasolinestation 1
                 if(i === 20){
@@ -47,7 +47,7 @@ let Car = (function(){
         refill(GasolineStation){                       
             myFuel += GasolineStation;
             //if there is not enough space in the tank
-            if(myFuel > tank){myFuel = 50};
+            if(myFuel > tank){myFuel = 50}
             return myFuel;            
         },
     }

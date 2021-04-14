@@ -5,12 +5,12 @@ class Track {
         this.albom = albom;
         this.singer = singer;
         this.explicit = explicit;
-    };
+    }
     duration(){
         return this.seconds;
     }
 
-};
+}
 
 module.exports  = {
     Track,
