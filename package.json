@@ -14,8 +14,8 @@
     "hw7": "node ./hw7/index.js",
     "hw8": "node ./hw8/index.js",
     "babel": "babel",
-    "lint" : "eslint .",
-    "lint:fix" : "npm run lint -- --fix"
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
