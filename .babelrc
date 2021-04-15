@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "es2015"
+    ],
+    "ignore": [
+        "library.js",
+        "player.js"
+    ]
+}

@@ -2,7 +2,7 @@
 function fibonacci(fiboNumber){
     if(isNaN(fiboNumber)){
         return "Enter number";
-    };
+    }
    if(fiboNumber<=1){
        return fiboNumber;
    }
@@ -15,9 +15,9 @@ function fibonacci(fiboNumber){
         secondNumber = mainNumber + secondNumber;
         mainNumber = saveNumber;
                  
-   };
+   }
    return String(boxForNumbers) + `\nTotal numbers - ${boxForNumbers.length -1}`;
-};
+}
 
 //EXPORT function fibonacci() => use into ../index.js
 module.exports = fibonacci;
