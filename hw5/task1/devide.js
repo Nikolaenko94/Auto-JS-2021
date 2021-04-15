@@ -11,6 +11,7 @@ function devide (first,second){
     }, 1100);
 }
 
+
 module.exports = {
     devide,
 };
