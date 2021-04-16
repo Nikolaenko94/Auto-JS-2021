@@ -13,6 +13,7 @@
     "hw6": "node ./hw6/index.js",
     "hw7": "node ./hw7/index.js",
     "hw8": "node ./hw8/index.js",
+    "hw9": "node ./hw9/index.ts",    
     "babel": "babel",
     "lint": "eslint hw8/**",
     "lint:fix": "npm run lint -- --fix",
@@ -65,8 +66,5 @@
         "git add"
       ]
     }
-  },
-  "dependencies": {
-    "@types/node": "^14.14.41"
   }
 }
