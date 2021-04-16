@@ -1,6 +1,6 @@
 import type {MainClassesTypes} from "./_typesGuardMainClass";
 
-class Artist{
+export class Artist{
     constructor(
         name: MainClassesTypes, 
         dateRelease: MainClassesTypes, 

@@ -1,6 +1,6 @@
 import type {MainClassesTypes} from "./_typesGuardMainClass";
 
-class Track{
+export class Track{
     constructor(
         name: MainClassesTypes, 
         durationTime: MainClassesTypes, 

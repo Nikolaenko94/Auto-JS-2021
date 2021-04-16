@@ -1,6 +1,6 @@
 import type {MainClassesTypes} from "./_typesGuardMainClass";
 
-class Album{
+export class Album{
     constructor(
         name: MainClassesTypes, 
         dateRelease: MainClassesTypes, 
