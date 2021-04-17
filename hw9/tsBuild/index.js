@@ -27,4 +27,6 @@ var lpLibrary = new library_1.Library(trackInTheEnd);
 lpLibrary.add(trackPapercut);
 lpLibrary.delete(trackInTheEnd);
 lpLibrary.add(trackInTheEnd, trackCastleOfGlass, trackFaint);
-lpLibrary.update(trackInTheEnd, 'durationTime', 4);
+// lpLibrary.update(trackInTheEnd, 'durationTime', 4);
+lpLibrary.search("In The End");
+lpLibrary.delete(trackFaint);

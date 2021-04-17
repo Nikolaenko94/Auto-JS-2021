@@ -43,6 +43,18 @@ var Library = /** @class */ (function () {
         console.log(this.Track[index]);
     };
     ;
+    //create search() method how promise
+    Library.prototype.search = function (value) {
+        var arrFinaly = this.Track.filter(function (element) {
+            return Object.values(element).includes(value);
+        });
+        var promise = function (ms) { return new Promise(function (resolve) { return setTimeout(resolve, ms); }); };
+        promise(300).then(function () {
+            console.log(arrFinaly);
+            return promise(300);
+        });
+    };
+    ;
     return Library;
 }());
 exports.Library = Library;

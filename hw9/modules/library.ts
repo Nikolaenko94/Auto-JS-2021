@@ -32,5 +32,16 @@ export class Library {
         let index: number = this.Track.indexOf(myElement);
         console.log("updated elemen:");
         console.log(this.Track[index]);
-    };   
+    };
+    //create search() method how promise
+    public search(value: string):void{        
+        let arrFinaly = this.Track.filter((element)=>{               
+            return Object.values(element).includes(value);
+        });                         
+        const promise = (ms) => new Promise((resolve) => setTimeout(resolve,ms));
+        promise(300).then(()=>{        
+                console.log(arrFinaly); 
+                return promise(300);
+        })        
+    };
 };
