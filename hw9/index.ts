@@ -2,6 +2,8 @@
 import {Track} from "./modules/track"
 import {Album} from "./modules/album"
 import {Artist} from "./modules/artist"
+//import library class
+import {Library} from "./modules/library"
 //creating tracks, albom, artist
 let trackInTheEnd = new Track("In The End", 5, false);
 let trackPapercut = new Track("Papercut", 4, false);
@@ -18,3 +20,6 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
+//creating library
+let lpLibrary = new Library(trackInTheEnd);
+lpLibrary.add(trackPapercut);

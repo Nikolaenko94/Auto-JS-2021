@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var track_1 = require("./modules/track");
 var album_1 = require("./modules/album");
 var artist_1 = require("./modules/artist");
+//import library class
+var library_1 = require("./modules/library");
 //creating tracks, albom, artist
 var trackInTheEnd = new track_1.Track("In The End", 5, false);
 var trackPapercut = new track_1.Track("Papercut", 4, false);
@@ -20,3 +22,6 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
+//creating library
+var lpLibrary = new library_1.Library(trackInTheEnd);
+lpLibrary.add(trackPapercut);
