@@ -2,9 +2,9 @@ import type {MainClassesTypes} from "./_typesGuardMainClass";
 
 export class Album{
     constructor(
-        name: MainClassesTypes, 
-        dateRelease: MainClassesTypes, 
-        tracks?: MainClassesTypes, 
-        artist?: MainClassesTypes){
+        public name: MainClassesTypes, 
+        public dateRelease: MainClassesTypes, 
+        public tracks?: MainClassesTypes, 
+        public artist?: MainClassesTypes){
     };
 };

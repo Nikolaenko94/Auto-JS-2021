@@ -2,9 +2,9 @@ import type {MainClassesTypes} from "./_typesGuardMainClass";
 
 export class Artist{
     constructor(
-        name: MainClassesTypes, 
-        dateRelease: MainClassesTypes, 
-        albums?: MainClassesTypes, 
-        tracks?: MainClassesTypes){
+        public name: MainClassesTypes, 
+        public dateRelease: MainClassesTypes, 
+        public albums?: MainClassesTypes, 
+        public tracks?: MainClassesTypes){
     };
 };
