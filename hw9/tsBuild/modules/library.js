@@ -31,6 +31,18 @@ var Library = /** @class */ (function () {
         console.log(value.name + ": successfully deleted");
     };
     ;
+    //create Update public method
+    Library.prototype.update = function (myElement, argument, value) {
+        this.Track.forEach(function (element) {
+            if (element === myElement) {
+                element["" + argument] = value;
+            }
+        });
+        var index = this.Track.indexOf(myElement);
+        console.log("updated elemen:");
+        console.log(this.Track[index]);
+    };
+    ;
     return Library;
 }());
 exports.Library = Library;

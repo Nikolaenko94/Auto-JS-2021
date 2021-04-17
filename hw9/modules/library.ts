@@ -1,4 +1,5 @@
 import { Track } from "./track";
+import { MainClassesTypes } from "./_typesGuardMainClass";
 export class Library {
     //create Track for storage all tracks, using generic type
     private Track: Array<object> = [];    
@@ -20,5 +21,16 @@ export class Library {
         let index: number = this.Track.indexOf(value);
         this.Track.splice(index,1);        
         console.log(`${value.name}: successfully deleted`)                    
+    };
+    //create Update public method
+    public update(myElement: Track, argument: string, value: MainClassesTypes): void{
+        this.Track.forEach(element => {
+            if(element === myElement){
+                element[`${argument}`] = value;
+            }
+        })
+        let index: number = this.Track.indexOf(myElement);
+        console.log("updated elemen:");
+        console.log(this.Track[index]);
     };   
 };

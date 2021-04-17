@@ -26,4 +26,5 @@ trackFaint.artist = artistLinkinPark;
 var lpLibrary = new library_1.Library(trackInTheEnd);
 lpLibrary.add(trackPapercut);
 lpLibrary.delete(trackInTheEnd);
-lpLibrary.tracksList();
+lpLibrary.add(trackInTheEnd, trackCastleOfGlass, trackFaint);
+lpLibrary.update(trackInTheEnd, 'durationTime', 4);
