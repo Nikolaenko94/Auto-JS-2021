@@ -6,6 +6,8 @@ var album_1 = require("./modules/album");
 var artist_1 = require("./modules/artist");
 //import library class
 var library_1 = require("./modules/library");
+//import player class
+var player_1 = require("./modules/player");
 //creating tracks, albom, artist
 var trackInTheEnd = new track_1.Track("In The End", 5, false);
 var trackPapercut = new track_1.Track("Papercut", 4, false);
@@ -30,3 +32,6 @@ lpLibrary.add(trackInTheEnd, trackCastleOfGlass, trackFaint);
 lpLibrary.update(trackInTheEnd, 'durationTime', 4);
 lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
+//createing player
+var player = player_1.Player.getInstance(lpLibrary);
+console.log(player);
