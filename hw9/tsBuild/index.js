@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 //import main classes: Track, Artist, Album;
 var track_1 = require("./modules/track");
 var album_1 = require("./modules/album");
@@ -20,3 +20,4 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
+console.log("asdsad");
