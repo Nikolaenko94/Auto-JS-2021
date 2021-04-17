@@ -10,5 +10,9 @@ export class Library {
         tracksArray.forEach(track => {
             this.Track.push(track)
         })               
-    };    
+    };
+    //create tracks list for watching all tracks, because Track - private storage
+    public tracksList():void{
+        console.log(this.Track)        
+    };   
 };
