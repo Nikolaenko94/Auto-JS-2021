@@ -34,8 +34,9 @@ lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
 //createing player
 let player = Player.getInstance(lpLibrary);
+player.shafle();
 setTimeout(() => {
-    player.play();
+    player.play();    
     player.next();  
 }, 1000);
 setTimeout(() => {

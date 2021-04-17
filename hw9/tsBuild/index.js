@@ -36,6 +36,7 @@ lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
 //createing player
 var player = player_1.Player.getInstance(lpLibrary);
+player.shafle();
 setTimeout(function () {
     player.play();
     player.next();
@@ -55,6 +56,6 @@ function playerCommands() {
     repl_1.start('Playing music').context.play = player.play();
 }
 ;
-setTimeout(function () {
-    playerCommands();
-}, 25000);
+// setTimeout(() => {
+//     playerCommands(); 
+// }, 25000);

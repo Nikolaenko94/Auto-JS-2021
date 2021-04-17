@@ -71,16 +71,29 @@ var Player = /** @class */ (function () {
         return strInfo;
     };
     ;
+    //next
     Player.prototype.next = function () {
         this.nextTrack();
     };
     ;
+    //prev
     Player.prototype.prev = function () {
         this.prevTrack();
     };
     ;
+    //pause
     Player.prototype.pause = function () {
         this.pauseTrack();
+    };
+    ;
+    //SHAFFLE METHOD
+    Player.prototype.shafle = function () {
+        var _a;
+        //used method sorting Fisher-Iets 
+        for (var i = Player.instance.TracksPlayer.length - 1; i > 0; i--) {
+            var count = Math.floor(Math.random() * (i + 1));
+            _a = [Player.instance.TracksPlayer[count], Player.instance.TracksPlayer[i]], Player.instance.TracksPlayer[i] = _a[0], Player.instance.TracksPlayer[count] = _a[1];
+        }
     };
     ;
     return Player;

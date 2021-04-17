@@ -67,13 +67,24 @@ export class Player {
         console.log(`${Player.instance.TracksPlayer[current].name}, Duration: ${Player.instance.TracksPlayer[current].durationTime}`);
         return strInfo;
     };
+    //next
     next():void{        
         this.nextTrack();
     };
+    //prev
     prev():void{        
         this.prevTrack();
     };
+    //pause
     pause():void{        
         this.pauseTrack();
-    };    
+    };
+    //SHAFFLE METHOD
+    shafle(): void{
+        //used method sorting Fisher-Iets 
+        for (let i:number = Player.instance.TracksPlayer.length - 1; i > 0; i--) {
+            let count: number = Math.floor(Math.random() * (i + 1));       
+            [Player.instance.TracksPlayer[i], Player.instance.TracksPlayer[count]] = [Player.instance.TracksPlayer[count], Player.instance.TracksPlayer[i]];
+          }          
+    };
 };
