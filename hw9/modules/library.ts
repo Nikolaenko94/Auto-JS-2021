@@ -35,10 +35,10 @@ export class Library {
     };
     //create search() method how promise
     public search(value: string):void{        
-        let arrFinaly = this.Track.filter((element)=>{               
+        let arrFinaly: Array<object> = this.Track.filter((element)=>{               
             return Object.values(element).includes(value);
         });                         
-        const promise = (ms) => new Promise((resolve) => setTimeout(resolve,ms));
+        const promise: Function = (ms:number) => new Promise((resolve) => setTimeout(resolve,ms));
         promise(300).then(()=>{        
                 console.log(arrFinaly); 
                 return promise(300);
