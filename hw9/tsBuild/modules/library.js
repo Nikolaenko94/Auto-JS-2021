@@ -22,6 +22,7 @@ var Library = /** @class */ (function () {
     //create tracks list for watching all tracks, because Track - private storage
     Library.prototype.tracksList = function () {
         console.log(this.Track);
+        return this.Track;
     };
     ;
     //create Delete public method 

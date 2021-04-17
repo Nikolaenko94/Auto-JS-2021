@@ -2,7 +2,7 @@ import { Track } from "./track";
 import { MainClassesTypes } from "./_typesGuardMainClass";
 export class Library {
     //create Track for storage all tracks, using generic type
-    private Track: Array<object> = [];    
+    private Track: Array<Track> = [];    
     constructor(track?: Track ){
         this.Track.push(track);
     }
@@ -13,8 +13,9 @@ export class Library {
         })               
     };
     //create tracks list for watching all tracks, because Track - private storage
-    public tracksList():void{
-        console.log(this.Track)        
+    public tracksList():Array<Track>{        
+        console.log(this.Track);
+        return this.Track        
     };
     //create Delete public method 
     public delete(value: Track):void{        

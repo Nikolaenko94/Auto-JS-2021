@@ -6,6 +6,8 @@ import {Artist} from "./modules/artist"
 import {Library} from "./modules/library"
 //import player class
 import {Player} from "./modules/player"
+//import for pattern command
+import {start} from 'repl'
 //creating tracks, albom, artist
 let trackInTheEnd = new Track("In The End", 5, false);
 let trackPapercut = new Track("Papercut", 4, false);
@@ -32,4 +34,25 @@ lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
 //createing player
 let player = Player.getInstance(lpLibrary);
-console.log(player);
+setTimeout(() => {
+    player.play();
+    player.next();  
+}, 1000);
+setTimeout(() => {
+    player.pause()
+}, 3000);
+setTimeout(() => {
+    player.play()
+    player.prev()
+}, 5000);
+
+function playerCommands(): void{
+    start('Playing music').context.play = player.play();
+    start('Next music').context.next = player.next();
+    start('Prev music').context.prev = player.prev();
+    start('Pause music').context.stop = player.pause();
+    start('Playing music').context.play = player.play();
+};
+setTimeout(() => {
+    playerCommands(); 
+}, 25000);
