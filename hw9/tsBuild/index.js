@@ -25,4 +25,5 @@ trackFaint.artist = artistLinkinPark;
 //creating library
 var lpLibrary = new library_1.Library(trackInTheEnd);
 lpLibrary.add(trackPapercut);
+lpLibrary.delete(trackInTheEnd);
 lpLibrary.tracksList();

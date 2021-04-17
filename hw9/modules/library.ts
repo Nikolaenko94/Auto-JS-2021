@@ -14,5 +14,11 @@ export class Library {
     //create tracks list for watching all tracks, because Track - private storage
     public tracksList():void{
         console.log(this.Track)        
+    };
+    //create Delete public method 
+    public delete(value: Track):void{        
+        let index: number = this.Track.indexOf(value);
+        this.Track.splice(index,1);        
+        console.log(`${value.name}: successfully deleted`)                    
     };   
 };

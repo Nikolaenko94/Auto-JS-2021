@@ -23,4 +23,5 @@ trackFaint.artist = artistLinkinPark;
 //creating library
 let lpLibrary = new Library(trackInTheEnd);
 lpLibrary.add(trackPapercut);
+lpLibrary.delete(trackInTheEnd);
 lpLibrary.tracksList();

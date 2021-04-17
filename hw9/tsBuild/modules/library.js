@@ -24,6 +24,13 @@ var Library = /** @class */ (function () {
         console.log(this.Track);
     };
     ;
+    //create Delete public method 
+    Library.prototype.delete = function (value) {
+        var index = this.Track.indexOf(value);
+        this.Track.splice(index, 1);
+        console.log(value.name + ": successfully deleted");
+    };
+    ;
     return Library;
 }());
 exports.Library = Library;
