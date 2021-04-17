@@ -20,4 +20,3 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
-console.log("asdsad");

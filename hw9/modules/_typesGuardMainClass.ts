@@ -4,5 +4,5 @@
 //for type guard we will describe all valid types for any parameters 
 
 type MainClassesTypes = string | number | object | Array<string> | Array<number> | Array<object> | Date;
-
+//MainClassesTypes includes Generics type : Array<number> and Array<object>
 export type {MainClassesTypes};
