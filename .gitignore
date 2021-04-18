@@ -3,5 +3,5 @@ package-lock.json
 .vscode
 es2015
 babel_files
-test.ts
-test.js
+info.ts
+info.js
