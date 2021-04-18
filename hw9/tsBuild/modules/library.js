@@ -5,7 +5,9 @@ var Library = /** @class */ (function () {
     function Library(track) {
         //create Track for storage all tracks, using generic type
         this.Track = [];
-        this.Track.push(track);
+        if (track) {
+            this.Track.push(track);
+        }
     }
     //create Add public method for tracks with type void
     Library.prototype.add = function () {

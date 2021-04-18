@@ -4,7 +4,9 @@ export class Library {
     //create Track for storage all tracks, using generic type
     private Track: Array<Track> = [];    
     constructor(track?: Track ){
-        this.Track.push(track);
+        if(track){
+            this.Track.push(track);
+        }        
     }
     //create Add public method for tracks with type void
     public add(...tracksArray: Track[]):void{       
@@ -24,7 +26,7 @@ export class Library {
         console.log(`${value.name}: successfully deleted`)                    
     };
     //create Update public method
-    public update(myElement: Track, argument: string, value: MainClassesTypes): void{
+    public update(myElement: Track, argument: string, value: MainClassesTypes | boolean): void{
         this.Track.forEach(element => {
             if(element === myElement){
                 element[`${argument}`] = value;
