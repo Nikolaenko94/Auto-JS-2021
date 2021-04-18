@@ -10,6 +10,8 @@ var library_1 = require("./modules/library");
 var player_1 = require("./modules/player");
 //import for pattern command
 var repl_1 = require("repl");
+//import readline for emitKeypressEvents
+var readline = require('readline');
 //creating tracks, albom, artist
 var trackInTheEnd = new track_1.Track("In The End", 5, false);
 var trackPapercut = new track_1.Track("Papercut", 4, false);
@@ -37,17 +39,17 @@ lpLibrary.delete(trackFaint);
 //createing player
 var player = player_1.Player.getInstance(lpLibrary);
 player.shafle();
-setTimeout(function () {
-    player.play();
-    player.next();
-}, 1000);
-setTimeout(function () {
-    player.pause();
-}, 3000);
-setTimeout(function () {
-    player.play();
-    player.prev();
-}, 5000);
+// setTimeout(() => {
+//     player.play();    
+//     player.next();  
+// }, 1000);
+// setTimeout(() => {
+//     player.pause()
+// }, 3000);
+// setTimeout(() => {
+//     player.play()
+//     player.prev()
+// }, 5000);
 function playerCommands() {
     repl_1.start('Playing music').context.play = player.play();
     repl_1.start('Next music').context.next = player.next();
@@ -59,3 +61,38 @@ function playerCommands() {
 // setTimeout(() => {
 //     playerCommands(); 
 // }, 25000);
+// BONUS: KeypressEvents
+readline.emitKeypressEvents(process.stdin);
+if (process.stdin.isTTY) {
+    process.stdin.setRawMode(true);
+}
+//ctrl+c into terminal - for STOP setRawMode
+process.stdin.on('keypress', function (str, key) {
+    if (key.ctrl && key.name === 'c') {
+        process.stdin.setRawMode(false);
+    }
+});
+//ctrl+y - for play()
+process.stdin.on('keypress', function (str, key) {
+    if (key.ctrl && key.name === 'y') {
+        player.play();
+    }
+});
+//ctrl+u - for pause()
+process.stdin.on('keypress', function (str, key) {
+    if (key.ctrl && key.name === 'u') {
+        player.pause();
+    }
+});
+//ctrl+l - for next()
+process.stdin.on('keypress', function (str, key) {
+    if (key.ctrl && key.name === 'l') {
+        player.next();
+    }
+});
+//shift+n - for prev()
+process.stdin.on('keypress', function (str, key) {
+    if (key.shift && key.name === 'n') {
+        player.prev();
+    }
+});
