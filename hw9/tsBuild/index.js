@@ -39,17 +39,17 @@ lpLibrary.delete(trackFaint);
 //createing player
 var player = player_1.Player.getInstance(lpLibrary);
 player.shafle();
-// setTimeout(() => {
-//     player.play();    
-//     player.next();  
-// }, 1000);
-// setTimeout(() => {
-//     player.pause()
-// }, 3000);
-// setTimeout(() => {
-//     player.play()
-//     player.prev()
-// }, 5000);
+setTimeout(function () {
+    player.play();
+    player.next();
+}, 1000);
+setTimeout(function () {
+    player.pause();
+}, 3000);
+setTimeout(function () {
+    player.play();
+    player.prev();
+}, 5000);
 function playerCommands() {
     repl_1.start('Playing music').context.play = player.play();
     repl_1.start('Next music').context.next = player.next();
@@ -91,7 +91,7 @@ process.stdin.on('keypress', function (str, key) {
     }
 });
 //shift+n - for prev()
-process.stdin.on('keypress', function (str, key) {
+process.stdin.on('keypress', function (key) {
     if (key.shift && key.name === 'n') {
         player.prev();
     }

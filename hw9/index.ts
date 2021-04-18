@@ -56,9 +56,9 @@ function playerCommands(): void{
     start('Pause music').context.stop = player.pause();
     start('Playing music').context.play = player.play();
 };
-setTimeout(() => {
-    playerCommands(); 
-}, 25000);
+// setTimeout(() => {
+//     playerCommands(); 
+// }, 25000);
 
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
@@ -66,31 +66,31 @@ if (process.stdin.isTTY) {
   process.stdin.setRawMode(true);
 }
 //ctrl+c into terminal - for STOP setRawMode
-process.stdin.on('keypress', (str, key) => {
+process.stdin.on('keypress', (str:string,key) => {
   if (key.ctrl && key.name === 'c') {
     process.stdin.setRawMode(false);
   }
 });
 //ctrl+y - for play()
-process.stdin.on('keypress', (str, key) => {
+process.stdin.on('keypress', (str:string,key) => {
     if (key.ctrl && key.name === 'y') {
         player.play();
     }
   });
 //ctrl+u - for pause()
-process.stdin.on('keypress', (str, key) => {
+process.stdin.on('keypress', (str:string,key) => {
   if (key.ctrl && key.name === 'u') {
       player.pause();
   }
 });
 //ctrl+l - for next()
-process.stdin.on('keypress', (str, key) => {
+process.stdin.on('keypress', (str:string,key) => {
   if (key.ctrl && key.name === 'l') {
       player.next();
   }
 });
 //shift+n - for prev()
-process.stdin.on('keypress', (str, key) => {
+process.stdin.on('keypress', (key) => {
   if (key.shift && key.name === 'n') {
       player.prev();
   }
