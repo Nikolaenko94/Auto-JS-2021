@@ -1,4 +1,5 @@
 const { setImmediate, setInterval } = require('timers');
+const EventEmitter = require('events');
 
 class Library{    
     Track = [];
@@ -120,8 +121,7 @@ class Library{
     }
     
 //PLAY METHOD
-    play(){ 
-        const EventEmitter = require('events');
+    play(){        
         const player = new EventEmitter();              
         let current = 0; 
         let myTracks = this.Track;
@@ -168,6 +168,7 @@ class Library{
         mainInterval.ref();        
         //END EMITATION
         console.log("Play");
+        console.log(myTracks[current].name)
         return strInfo;
     };
     next(){
