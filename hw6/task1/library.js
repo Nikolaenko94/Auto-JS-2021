@@ -12,7 +12,7 @@ class Library{
     //ELSE: For class parameters. If we have more then one parameters = > [new Class,...parametrs for this class ];           
              
                             // TRACK                            
-            if(args[0].constructor.name === "Track"){
+            if(!args[0].constructor.name.indexOf("Track")){
                 if(args.length === 1){
                     this.Track.push(args[0]);                    
                 }
@@ -21,7 +21,7 @@ class Library{
             };
 
                             // ALBUM
-            if(args[0].constructor.name === "Album"){
+            if(!args[0].constructor.name.indexOf("Album")){
                 if(args.length === 1){
                     this.Album.push(args[0]);
                 }
@@ -43,7 +43,7 @@ class Library{
                 }         
             };
                                 //ARTIST
-            if(args[0].constructor.name === "Artist"){
+            if(!args[0].constructor.name.indexOf("Artist")){
                 if(args.length === 1){
                     this.Artist.push(args[0]);
                 }
