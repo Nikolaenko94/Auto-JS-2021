@@ -56,6 +56,8 @@ library.add(fabricTrack);
 console.log("Singlton work")
 const newLibrary = new Library.Library;
 console.log(newLibrary);
+console.log("==Static getInstance")
+console.log(Library.Library.getInstance())
 repl.start('Music is playing with REPL\n').context.play = library.play();
 repl.start('Music pause with REPL\n').context.pause = library.pause();
 repl.start('Music is playing with REPL\n').context.play = library.play();

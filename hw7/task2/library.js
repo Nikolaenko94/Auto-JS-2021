@@ -10,6 +10,9 @@ class Library{
             return Library._instance
         }
         Library._instance = this;
+    }
+    static getInstance() {
+        return Library._instance;
     }     
  // ADD METHOD WITH NESTINGS   
     add(...args){        
