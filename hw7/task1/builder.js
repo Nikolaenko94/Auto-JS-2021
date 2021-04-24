@@ -6,7 +6,7 @@ class Builder {
         this.string += data;        
     };    
     build(){
-        throw new Error(`В ${this.constructor.string} не описан метод Builder()`);
+        throw new Error(`Inside the ${this.constructor.string} - Builder() not described`);
     };
 };
 
