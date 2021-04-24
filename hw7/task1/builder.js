@@ -1,12 +1,12 @@
 class Builder {
-    constructor(string){
-        this.string = string;
+    constructor(data){
+        this.data = data;
     }
-    append(data){
-        this.string += data;        
+    append(value){
+        this.data += value;        
     };    
     build(){
-        throw new Error(`Inside the ${this.constructor.string} - Builder() not described`);
+        throw new Error(`Inside the ${this.constructor.data} - Builder() not described`);
     };
 };
 
