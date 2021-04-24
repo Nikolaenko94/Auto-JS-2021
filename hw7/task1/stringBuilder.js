@@ -4,9 +4,9 @@ class StringBuilder extends Builder{
     constructor(string){
         super(string);
     }
-    delete(index, count){
-        let str = this.string.substr(index,count);
-        this.string = this.string.replace(str, "");
+    delete(index, count){       
+        let deleteResult = this.string.slice(index, index + count);
+        return deleteResult;        
     }
     toString(){
         return this.string;
