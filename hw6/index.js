@@ -31,6 +31,6 @@ console.log(library.search("In the End"));
 //usage task 2
 console.log("======================TASK 2========================");
 //setTimeout for showing task1 
-// setTimeout(() => {
-//     loading.loading(loading.asyncFn()); 
-// }, 4000);
+setTimeout(() => {
+    loading.myPromise()
+}, 1000);
