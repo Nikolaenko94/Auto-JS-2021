@@ -80,7 +80,7 @@ export class Player {
         this.pauseTrack();
     };
     //SHAFFLE METHOD
-    shafle(): void{
+    shuffle(): void{
         //used method sorting Fisher-Iets 
         for (let i:number = Player.instance.TracksPlayer.length - 1; i > 0; i--) {
             let count: number = Math.floor(Math.random() * (i + 1));       
