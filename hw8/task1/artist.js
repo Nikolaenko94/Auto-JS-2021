@@ -1,13 +1,12 @@
-class Album {
-    constructor(name, data, traks, singer){
+class Artist {
+    constructor(name, data, albums, traks){
         this.name = name;
         this.data = data;
+        this.albums = albums;
         this.traks = traks;
-        this.singer = singer;
     }
 }
 
-
 module.exports = {
-    Album,
+    Artist,
 };

@@ -4,8 +4,8 @@ class Artist {
         this.data = data;
         this.albums = albums;
         this.traks = traks;
-    };
-};
+    }
+}
 
 module.exports = {
     Artist,
