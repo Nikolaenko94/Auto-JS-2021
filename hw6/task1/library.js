@@ -1,6 +1,8 @@
 const { setImmediate, setInterval } = require('timers');
 const EventEmitter = require('events');
-
+const Track = require('./track');
+const Album = require('./album');
+const Artist = require('./artist')
 class Library{    
     Track = [];
     Album = [];
@@ -13,7 +15,7 @@ class Library{
     //ELSE: For class parameters. If we have more then one parameters = > [new Class,...parametrs for this class ];           
              
                             // TRACK                            
-            if(!args[0].constructor.name.indexOf("Track")){
+            if(args[0] instanceof Track.Track){
                 if(args.length === 1){
                     this.Track.push(args[0]);                    
                 }
@@ -22,7 +24,7 @@ class Library{
             };
 
                             // ALBUM
-            if(!args[0].constructor.name.indexOf("Album")){
+            if(args[0] instanceof Album.Album){
                 if(args.length === 1){
                     this.Album.push(args[0]);
                 }
@@ -44,7 +46,7 @@ class Library{
                 }         
             };
                                 //ARTIST
-            if(!args[0].constructor.name.indexOf("Artist")){
+            if(args[0] instanceof Artist.Artist){
                 if(args.length === 1){
                     this.Artist.push(args[0]);
                 }
