@@ -26,7 +26,7 @@ export class Player {
         let current: number = 0;         
         let strInfo: string = `${Player.instance.TracksPlayer[current].name}, Duration: ${Player.instance.TracksPlayer[current].durationTime}`; 
         //EventEmitter next()        
-        this.nextTrack = function():void{player.once('next', ()=>{
+        this.nextTrack = function():void{player.on('next', ()=>{
             if(current + 1 >= Player.instance.TracksPlayer.length){ 
                 current = 0;                
             }
@@ -36,7 +36,7 @@ export class Player {
                     
         })};
         //EventEmitter prev()    
-        this.prevTrack = function():void{player.once('prev', ()=>{
+        this.prevTrack = function():void{player.on('prev', ()=>{
             if(current - 1 < 0){ 
                 console.log("Invalid command");               
             }
@@ -46,7 +46,7 @@ export class Player {
                     
         })};
         //EventEmitter pause()
-        this.pauseTrack = function():void{player.once('pause', ()=>{
+        this.pauseTrack = function():void{player.on('pause', ()=>{
             mainInterval.unref();
             clearInterval(mainInterval);
             console.log("pause");                        

@@ -27,7 +27,7 @@ var Player = /** @class */ (function () {
         var strInfo = Player.instance.TracksPlayer[current].name + ", Duration: " + Player.instance.TracksPlayer[current].durationTime;
         //EventEmitter next()        
         this.nextTrack = function () {
-            player.once('next', function () {
+            player.on('next', function () {
                 if (current + 1 >= Player.instance.TracksPlayer.length) {
                     current = 0;
                 }
@@ -38,7 +38,7 @@ var Player = /** @class */ (function () {
         };
         //EventEmitter prev()    
         this.prevTrack = function () {
-            player.once('prev', function () {
+            player.on('prev', function () {
                 if (current - 1 < 0) {
                     console.log("Invalid command");
                 }
@@ -49,7 +49,7 @@ var Player = /** @class */ (function () {
         };
         //EventEmitter pause()
         this.pauseTrack = function () {
-            player.once('pause', function () {
+            player.on('pause', function () {
                 mainInterval.unref();
                 clearInterval(mainInterval);
                 console.log("pause");
