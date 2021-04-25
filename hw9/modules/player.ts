@@ -2,17 +2,20 @@ import { Library } from "./library";
 import { Track } from "./track";
 import {EventEmitter} from 'events';
 export class Player {
-    public TracksPlayer: Array<Track>= [];
+    public TracksPlayer: Array<Track> = [];
     private nextTrack: Function;
     private prevTrack: Function;
     private pauseTrack: Function;
     private static instance: Player;
-    private constructor(library: Library) {};
-    static getInstance(library: Library): Player {
+    private constructor(library: Array<Library>) {};
+    static getInstance(library: Array<Library>): Player {
         if (!Player.instance) {
             Player.instance = new Player(library);
-            library.tracksList().forEach(element => {
-                Player.instance.TracksPlayer.push(element);
+            library.forEach(element => {
+                // Player.instance.TracksPlayer.push(element.tracksList);
+                element.tracksList().forEach(element =>{
+                    Player.instance.TracksPlayer.push(element)
+                })
             });                                        
         }
         return Player.instance;

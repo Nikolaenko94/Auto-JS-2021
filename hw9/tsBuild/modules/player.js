@@ -10,8 +10,11 @@ var Player = /** @class */ (function () {
     Player.getInstance = function (library) {
         if (!Player.instance) {
             Player.instance = new Player(library);
-            library.tracksList().forEach(function (element) {
-                Player.instance.TracksPlayer.push(element);
+            library.forEach(function (element) {
+                // Player.instance.TracksPlayer.push(element.tracksList);
+                element.tracksList().forEach(function (element) {
+                    Player.instance.TracksPlayer.push(element);
+                });
             });
         }
         return Player.instance;
@@ -87,7 +90,7 @@ var Player = /** @class */ (function () {
     };
     ;
     //SHAFFLE METHOD
-    Player.prototype.shafle = function () {
+    Player.prototype.shuffle = function () {
         var _a;
         //used method sorting Fisher-Iets 
         for (var i = Player.instance.TracksPlayer.length - 1; i > 0; i--) {

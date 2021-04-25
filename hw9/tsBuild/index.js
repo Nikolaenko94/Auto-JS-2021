@@ -28,8 +28,9 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
-//creating library
+//creating librarys
 var lpLibrary = new library_1.Library(trackInTheEnd);
+var lpLibrary2 = new library_1.Library(trackPapercut);
 lpLibrary.add(trackPapercut);
 lpLibrary.delete(trackInTheEnd);
 lpLibrary.add(trackInTheEnd, trackCastleOfGlass, trackFaint);
@@ -37,8 +38,8 @@ lpLibrary.update(trackInTheEnd, 'durationTime', 4);
 lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
 //createing player
-var player = player_1.Player.getInstance(lpLibrary);
-player.shafle();
+var player = player_1.Player.getInstance([lpLibrary, lpLibrary2]);
+player.shuffle();
 setTimeout(function () {
     player.play();
     player.next();

@@ -26,8 +26,9 @@ trackInTheEnd.artist = artistLinkinPark;
 trackPapercut.artist = artistLinkinPark;
 trackCastleOfGlass.artist = artistLinkinPark;
 trackFaint.artist = artistLinkinPark;
-//creating library
+//creating librarys
 let lpLibrary = new Library(trackInTheEnd);
+let lpLibrary2 = new Library(trackPapercut);
 lpLibrary.add(trackPapercut);
 lpLibrary.delete(trackInTheEnd);
 lpLibrary.add(trackInTheEnd,trackCastleOfGlass,trackFaint);
@@ -35,7 +36,7 @@ lpLibrary.update(trackInTheEnd, 'durationTime', 4);
 lpLibrary.search("In The End");
 lpLibrary.delete(trackFaint);
 //createing player
-let player = Player.getInstance(lpLibrary);
+let player = Player.getInstance([lpLibrary,lpLibrary2]);
 player.shuffle();
 setTimeout(() => {
     player.play();    
