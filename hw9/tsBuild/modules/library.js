@@ -5,6 +5,9 @@ var Library = /** @class */ (function () {
     function Library(track) {
         //create Track for storage all tracks, using generic type
         this.Track = [];
+        if (typeof track !== "object") {
+            throw new Error("Error data type for track");
+        }
         if (track) {
             this.Track.push(track);
         }
