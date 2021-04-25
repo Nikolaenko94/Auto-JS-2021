@@ -52,16 +52,36 @@ setTimeout(function () {
     player.prev();
 }, 5000);
 function playerCommands() {
-    repl_1.start('Playing music').context.play = player.play();
-    repl_1.start('Next music').context.next = player.next();
-    repl_1.start('Prev music').context.prev = player.prev();
-    repl_1.start('Pause music').context.stop = player.pause();
-    repl_1.start('Playing music').context.play = player.play();
+    var replServer = repl_1.start({ prompt: ">" });
+    replServer.defineCommand('play', {
+        help: 'Play',
+        action: function () {
+            player.play();
+        }
+    });
+    replServer.defineCommand('next', {
+        help: 'Next',
+        action: function () {
+            player.next();
+        }
+    });
+    replServer.defineCommand('prev', {
+        help: 'Prev',
+        action: function () {
+            player.prev();
+        }
+    });
+    replServer.defineCommand('pause', {
+        help: 'pause',
+        action: function () {
+            player.pause();
+        }
+    });
 }
 ;
-// setTimeout(() => {
-//     playerCommands(); 
-// }, 25000);
+setTimeout(function () {
+    playerCommands();
+}, 25000);
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
 if (process.stdin.isTTY) {
@@ -92,7 +112,7 @@ process.stdin.on('keypress', function (str, key) {
     }
 });
 //shift+n - for prev()
-process.stdin.on('keypress', function (key) {
+process.stdin.on('keypress', function (str, key) {
     if (key.shift && key.name === 'n') {
         player.prev();
     }

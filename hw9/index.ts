@@ -51,15 +51,35 @@ setTimeout(() => {
 }, 5000);
 
 function playerCommands(): void{
-    start('Playing music').context.play = player.play();
-    start('Next music').context.next = player.next();
-    start('Prev music').context.prev = player.prev();
-    start('Pause music').context.stop = player.pause();
-    start('Playing music').context.play = player.play();
+    const replServer  = start({prompt:">"});
+    replServer.defineCommand('play',{
+      help:'Play',
+      action(){
+        player.play()
+      }
+    });
+    replServer.defineCommand('next',{
+      help:'Next',
+      action(){
+        player.next()
+      }
+    });
+    replServer.defineCommand('prev',{
+      help:'Prev',
+      action(){
+        player.prev()
+      }
+    });
+    replServer.defineCommand('pause',{
+      help:'pause',
+      action(){
+        player.pause()
+      }
+    });    
 };
-// setTimeout(() => {
-//     playerCommands(); 
-// }, 25000);
+setTimeout(() => {
+    playerCommands(); 
+}, 25000);
 
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
@@ -91,7 +111,7 @@ process.stdin.on('keypress', (str:string,key) => {
   }
 });
 //shift+n - for prev()
-process.stdin.on('keypress', (key) => {
+process.stdin.on('keypress', (str:string,key) => {
   if (key.shift && key.name === 'n') {
       player.prev();
   }
