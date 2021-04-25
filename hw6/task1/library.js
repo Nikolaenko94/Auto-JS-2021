@@ -129,7 +129,7 @@ class Library{
         let myTracks = this.Track;
         let strInfo = `${myTracks[current].name}, Duration: ${myTracks[current].seconds}`; 
         //EventEmitter next()        
-        this.nextTrack = function(){player.once('next', ()=>{
+        this.nextTrack = function(){player.on('next', ()=>{
             if(current + 1 >= myTracks.length){ 
                 current = 0;                
             }
@@ -139,7 +139,7 @@ class Library{
                        
         })};
         //EventEmitter prev()    
-        this.prevTrack = function(){player.once('prev', ()=>{
+        this.prevTrack = function(){player.on('prev', ()=>{
             if(current - 1 < 0){ 
                 console.log("Invalid command");               
             }
@@ -149,7 +149,7 @@ class Library{
                        
         })};
         //EventEmitter pause()
-        this.pauseTrack = function(){player.once('pause', ()=>{
+        this.pauseTrack = function(){player.on('pause', ()=>{
             mainInterval.unref();
             clearInterval(mainInterval);
             console.log("pause");                        

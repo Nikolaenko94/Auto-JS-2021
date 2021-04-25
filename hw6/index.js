@@ -27,10 +27,18 @@ library.add(HybridTheory,[InTheEnd,Papercut])
 library.add(LinkinPark);
 library.add(InTheEnd);
 library.add(Papercut);
+library.add(newTrack);
+library.add(newTrack2);
 console.log(library.search("In the End"));
+setTimeout(() => {
+    library.next();
+    library.next();  
+}, 1500);
+library.play()
+
 //usage task 2
 console.log("======================TASK 2========================");
 //setTimeout for showing task1 
-setTimeout(() => {
-    loading.myPromise()
-}, 1000);
+// setTimeout(() => {
+//     loading.myPromise()
+// }, 1000);
