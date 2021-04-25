@@ -38,18 +38,6 @@ lpLibrary.delete(trackFaint);
 //createing player
 let player = Player.getInstance([lpLibrary,lpLibrary2]);
 player.shuffle();
-setTimeout(() => {
-    player.play();    
-    player.next();  
-}, 1000);
-setTimeout(() => {
-    player.pause()
-}, 3000);
-setTimeout(() => {
-    player.play()
-    player.prev()
-}, 5000);
-
 function playerCommands(): void{
     const replServer  = start({prompt:">"});
     replServer.defineCommand('play',{
