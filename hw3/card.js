@@ -2,7 +2,7 @@ function Card(name, newCardBalance){
     this.name = name;
     if(isNaN(newCardBalance)){
         newCardBalance = 0;
-    };    
+    }    
     this.name?true:this.name="Anonim Card";       
     // chekcBalance function    
     this.getBalance = function (){        
@@ -25,7 +25,7 @@ function Card(name, newCardBalance){
     this.transferBalance = function(course){
         return newCardBalance * course;
     };    
-};
+}
 
 module.exports = {
     Card,

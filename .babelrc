@@ -3,6 +3,7 @@
         "es2015"
     ],
     "ignore": [
-        "library.js"
+        "library.js",
+        "player.js"
     ]
 }
