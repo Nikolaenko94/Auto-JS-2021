@@ -6,8 +6,7 @@ import {Artist} from "./modules/artist"
 import {Library} from "./modules/library"
 //import player class
 import {Player} from "./modules/player"
-//import for pattern command
-import {start} from 'repl'
+
 //import readline for emitKeypressEvents
 const readline = require('readline');
 //creating tracks, albom, artist
@@ -38,36 +37,6 @@ lpLibrary.delete(trackFaint);
 //createing player
 let player = Player.getInstance([lpLibrary,lpLibrary2]);
 player.shuffle();
-function playerCommands(): void{
-    const replServer  = start({prompt:">"});
-    replServer.defineCommand('play',{
-      help:'Play',
-      action(){
-        player.play()
-      }
-    });
-    replServer.defineCommand('next',{
-      help:'Next',
-      action(){
-        player.next()
-      }
-    });
-    replServer.defineCommand('prev',{
-      help:'Prev',
-      action(){
-        player.prev()
-      }
-    });
-    replServer.defineCommand('pause',{
-      help:'pause',
-      action(){
-        player.pause()
-      }
-    });    
-};
-
-playerCommands(); 
-
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
 if (process.stdin.isTTY) {

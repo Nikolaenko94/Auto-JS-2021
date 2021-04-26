@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 var events_1 = require("events");
+//import for pattern command
+var repl_1 = require("repl");
 var Player = /** @class */ (function () {
     function Player(library) {
         this.TracksPlayer = [];
@@ -10,6 +12,7 @@ var Player = /** @class */ (function () {
     Player.getInstance = function (library) {
         if (!Player.instance) {
             Player.instance = new Player(library);
+            Player.instance.playerCommands();
             library.forEach(function (element) {
                 // Player.instance.TracksPlayer.push(element.tracksList);
                 element.tracksList().forEach(function (element) {
@@ -97,6 +100,34 @@ var Player = /** @class */ (function () {
             var count = Math.floor(Math.random() * (i + 1));
             _a = [Player.instance.TracksPlayer[count], Player.instance.TracksPlayer[i]], Player.instance.TracksPlayer[i] = _a[0], Player.instance.TracksPlayer[count] = _a[1];
         }
+    };
+    ;
+    Player.prototype.playerCommands = function () {
+        var replServer = repl_1.start({ prompt: ">" });
+        replServer.defineCommand('play', {
+            help: 'Play',
+            action: function () {
+                Player.instance.play();
+            }
+        });
+        replServer.defineCommand('next', {
+            help: 'Next',
+            action: function () {
+                Player.instance.next();
+            }
+        });
+        replServer.defineCommand('prev', {
+            help: 'Prev',
+            action: function () {
+                Player.instance.prev();
+            }
+        });
+        replServer.defineCommand('pause', {
+            help: 'pause',
+            action: function () {
+                Player.instance.pause();
+            }
+        });
     };
     ;
     return Player;

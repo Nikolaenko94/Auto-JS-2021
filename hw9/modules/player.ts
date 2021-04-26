@@ -1,6 +1,8 @@
 import { Library } from "./library";
 import { Track } from "./track";
 import {EventEmitter} from 'events';
+//import for pattern command
+import {start} from 'repl'
 export class Player {
     public TracksPlayer: Array<Track> = [];
     private nextTrack: Function;
@@ -11,13 +13,14 @@ export class Player {
     static getInstance(library: Array<Library>): Player {
         if (!Player.instance) {
             Player.instance = new Player(library);
+            Player.instance.playerCommands();
             library.forEach(element => {
                 // Player.instance.TracksPlayer.push(element.tracksList);
                 element.tracksList().forEach(element =>{
                     Player.instance.TracksPlayer.push(element)
                 })
             });                                        
-        }
+        }        
         return Player.instance;
     };
     //PLAY METHOD
@@ -89,5 +92,32 @@ export class Player {
             let count: number = Math.floor(Math.random() * (i + 1));       
             [Player.instance.TracksPlayer[i], Player.instance.TracksPlayer[count]] = [Player.instance.TracksPlayer[count], Player.instance.TracksPlayer[i]];
           }          
+    };
+    playerCommands(): void{
+        const replServer  = start({prompt:">"});
+        replServer.defineCommand('play',{
+        help:'Play',
+        action(){
+            Player.instance.play()
+        }
+        });
+        replServer.defineCommand('next',{
+        help:'Next',
+        action(){
+            Player.instance.next()
+        }
+        });
+        replServer.defineCommand('prev',{
+        help:'Prev',
+        action(){
+            Player.instance.prev()
+        }
+        });
+        replServer.defineCommand('pause',{
+        help:'pause',
+        action(){
+            Player.instance.pause()
+        }
+        })
     };
 };

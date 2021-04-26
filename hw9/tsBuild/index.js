@@ -8,8 +8,6 @@ var artist_1 = require("./modules/artist");
 var library_1 = require("./modules/library");
 //import player class
 var player_1 = require("./modules/player");
-//import for pattern command
-var repl_1 = require("repl");
 //import readline for emitKeypressEvents
 var readline = require('readline');
 //creating tracks, albom, artist
@@ -40,35 +38,34 @@ lpLibrary.delete(trackFaint);
 //createing player
 var player = player_1.Player.getInstance([lpLibrary, lpLibrary2]);
 player.shuffle();
-function playerCommands() {
-    var replServer = repl_1.start({ prompt: ">" });
-    replServer.defineCommand('play', {
-        help: 'Play',
-        action: function () {
-            player.play();
-        }
-    });
-    replServer.defineCommand('next', {
-        help: 'Next',
-        action: function () {
-            player.next();
-        }
-    });
-    replServer.defineCommand('prev', {
-        help: 'Prev',
-        action: function () {
-            player.prev();
-        }
-    });
-    replServer.defineCommand('pause', {
-        help: 'pause',
-        action: function () {
-            player.pause();
-        }
-    });
-}
-;
-playerCommands();
+// function playerCommands(): void{
+//     const replServer  = start({prompt:">"});
+//     replServer.defineCommand('play',{
+//       help:'Play',
+//       action(){
+//         player.play()
+//       }
+//     });
+//     replServer.defineCommand('next',{
+//       help:'Next',
+//       action(){
+//         player.next()
+//       }
+//     });
+//     replServer.defineCommand('prev',{
+//       help:'Prev',
+//       action(){
+//         player.prev()
+//       }
+//     });
+//     replServer.defineCommand('pause',{
+//       help:'pause',
+//       action(){
+//         player.pause()
+//       }
+//     });    
+// };
+// playerCommands(); 
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
 if (process.stdin.isTTY) {
