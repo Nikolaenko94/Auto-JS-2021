@@ -68,9 +68,7 @@ function playerCommands() {
     });
 }
 ;
-setTimeout(function () {
-    playerCommands();
-}, 25000);
+playerCommands();
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
 if (process.stdin.isTTY) {

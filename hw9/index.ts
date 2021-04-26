@@ -65,9 +65,8 @@ function playerCommands(): void{
       }
     });    
 };
-setTimeout(() => {
-    playerCommands(); 
-}, 25000);
+
+playerCommands(); 
 
 // BONUS: KeypressEvents
 readline.emitKeypressEvents(process.stdin);
