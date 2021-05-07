@@ -6,8 +6,12 @@ class Calcalator{
         return a + b
     }
     subtract(a, b){
-
-    }
+        if(typeof a !== "number" || typeof b !== "number"){
+            throw new Error("Invalid data type")
+        };
+        return a - b
+    }    
+    
     multiply(a, b){
 
     }
@@ -16,7 +20,3 @@ class Calcalator{
     }
 
 }
-
-const newCalc = new Calcalator();
-let summ = newCalc.add()
-console.log(summ)
