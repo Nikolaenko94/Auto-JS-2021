@@ -21,11 +21,12 @@ class Calcalator{
         return a * b
     }   
     divide(a, b){
-
+        if(typeof a !== "number" || typeof b !== "number"){
+            throw new Error("Invalid data type")
+        };
+        if(b === 0 ){
+            throw new Error("Cannot divide by zero")
+        }
+        return a / b   
     }
-
 }
-
-const newCalc = new Calcalator();
-let summ = newCalc.multiply(0, -2)
-console.log(summ)
