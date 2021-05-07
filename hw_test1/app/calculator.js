@@ -1,15 +1,22 @@
 class Calcalator{
-    add(){
+    add(a, b){
+        if(typeof a !== "number" || typeof b !== "number"){
+            throw new Error("Invalid data type")
+        };
+        return a + b
+    }
+    subtract(a, b){
 
     }
-    subtract(){
+    multiply(a, b){
 
     }
-    multiply(){
+    divide(a, b){
 
-    }
-    divide(){
-        
     }
 
 }
+
+const newCalc = new Calcalator();
+let summ = newCalc.add()
+console.log(summ)
