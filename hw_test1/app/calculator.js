@@ -1,4 +1,4 @@
-class Calcalator{
+class Calculator{
     add(a, b){
         if(typeof a !== "number" || typeof b !== "number"){
             throw new Error("Invalid data type")
@@ -29,4 +29,8 @@ class Calcalator{
         }
         return a / b   
     }
+}
+
+module.exports = {
+    Calculator
 }

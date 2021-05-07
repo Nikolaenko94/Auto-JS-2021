@@ -2,8 +2,8 @@
 
 module.exports = {
     diff: true,
-    reporter: "mochavesome",
+    reporter: "mochawesome",
     timeout: 5000,
     ui: "bdd",
-    spec: "test/specs/*spec.js"
+    spec: "hw_test1/test/specs/*spec.js"
 }

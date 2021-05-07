@@ -1,0 +1,233 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-07T18:10:50.786Z",
+    "end": "2021-05-07T18:10:50.799Z",
+    "duration": 13,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2fa4b07-b87f-4bc2-b8ba-c34a7847471a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+          "title": "Add method unit testing:",
+          "fullFile": "D:\\!EPAM'S_COURSES\\GIT_TRAIN\\Auto-JS-2021\\hw_test1\\test\\specs\\addCalculator.spec.js",
+          "file": "\\hw_test1\\test\\specs\\addCalculator.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Add method unit testing:\"",
+              "fullTitle": "Add method unit testing: \"before each\" hook in \"Add method unit testing:\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "calculator = new Calculator.Calculator();",
+              "err": {},
+              "uuid": "c902d4c9-efa2-4651-8cee-f62ac7ec94fa",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Add method unit testing:\"",
+              "fullTitle": "Add method unit testing: \"after each\" hook in \"Add method unit testing:\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "calculator = null;",
+              "err": {},
+              "uuid": "e7248ee7-5ed5-4307-85e4-8fb8ede7b438",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should return 15 when called: add(7,8)",
+              "fullTitle": "Add method unit testing: should return 15 when called: add(7,8)",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(calculator.add(7,8)).to.equal(15);",
+              "err": {},
+              "uuid": "a9436f61-14cb-4475-8a4e-debbefc312bf",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return -1 when called: add(7,-8)",
+              "fullTitle": "Add method unit testing: should return -1 when called: add(7,-8)",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(calculator.add(7,-8)).to.equal(-1);",
+              "err": {},
+              "uuid": "447dcd85-3018-4983-8236-5a4edd7f1e99",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return 1 when called: add(-7,8)",
+              "fullTitle": "Add method unit testing: should return 1 when called: add(-7,8)",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(calculator.add(-7,8)).to.equal(1);",
+              "err": {},
+              "uuid": "d7486b45-b69c-4b67-b497-16b3e3cb2872",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return -15 when called: add(-7,-8)",
+              "fullTitle": "Add method unit testing: should return -15 when called: add(-7,-8)",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(calculator.add(-7,-8)).to.equal(-15);",
+              "err": {},
+              "uuid": "577f19a4-062a-41b7-b041-4fe9376255c2",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return Error when called: add(152,\"14\")",
+              "fullTitle": "Add method unit testing: should return Error when called: add(152,\"14\")",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let message = () =>  calculator.add(152, \"14\");       \nexpect(message).to.throw(\"Invalid data type\");",
+              "err": {},
+              "uuid": "761e6836-9968-4063-835b-60f18317f37b",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return Error when called: add(\"152\",14)",
+              "fullTitle": "Add method unit testing: should return Error when called: add(\"152\",14)",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let message = () =>  calculator.add(\"152\", 14);       \nexpect(message).to.throw(\"Invalid data type\");",
+              "err": {},
+              "uuid": "f3bd212e-46e8-479b-9a74-6e44b452d02d",
+              "parentUUID": "3721c5bf-9590-4cbb-972c-b2bcf116b028",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9436f61-14cb-4475-8a4e-debbefc312bf",
+            "447dcd85-3018-4983-8236-5a4edd7f1e99",
+            "d7486b45-b69c-4b67-b497-16b3e3cb2872",
+            "577f19a4-062a-41b7-b041-4fe9376255c2",
+            "761e6836-9968-4063-835b-60f18317f37b",
+            "f3bd212e-46e8-479b-9a74-6e44b452d02d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
