@@ -18,7 +18,8 @@
     "lint:fix": "npm run lint -- --fix",
     "commit": "cz",
     "prettier": "prettier -c hw8/**/*.js",
-    "unit": "mocha --config ./hw_test1/test/config/mocha.config.js"
+    "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
+    "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js"
   },
   "repository": {
     "type": "git",
