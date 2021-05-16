@@ -14,7 +14,7 @@ describe("Google.com unit testing", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
-        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN'))
+        .setChromeOptions(new chrome.Options().addArguments('--lang=en-EN'))
         .withCapabilities(webdriver.Capabilities.chrome())        
         .build();
     });                 
@@ -78,5 +78,13 @@ describe("Google.com unit testing", function(){
             result.text = textIntoLink;
         })();                               
         await expect(result).to.eql(finalyResult);                  
+    });
+    it('should appears special window for searching by image after press button "Search by image"',async function(){                           
+        await driver.get('https://www.google.com/imghp?hl=en&ogbl');                                 
+        await driver.findElement(By.xpath("//*[@class='LM8x9c']")).click();
+        await (await driver).sleep(1000);        
+        let windowForSearchDisplayed = await driver.findElement(By.id("QDMvGf")).isDisplayed();                          
+        await driver.quit();                           
+        await expect(windowForSearchDisplayed).to.equal(true);                  
     });
 });    
