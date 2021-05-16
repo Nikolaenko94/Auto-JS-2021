@@ -32,20 +32,27 @@ describe("Google.com unit testing", function(){
         await expect(url).to.equal('https://www.google.com/');                  
     });
     it('should working search with key "Enter"',async function(){               
-        await driver.get('https://www.google.ru/');           
+        await driver.get('https://www.google.com/');           
         await driver.findElement(By.name("q")).sendKeys('wikipedia', Key.ENTER);        
         let titleAfterSearh = await driver.getTitle();
         await driver.quit()                           
         await expect(titleAfterSearh).to.equal('wikipedia - Google Search');                  
     });
     it('should working search with press button "Google Search"',async function(){                     
-        await driver.get('https://www.google.ru/');                          
+        await driver.get('https://www.google.com/');                          
         await driver.findElement(By.name("q")).sendKeys('wikipedia');        
         await (await driver).sleep(500);        
         await driver.findElement(By.name("btnK")).click();                        
         let titleAfterSearh = await driver.getTitle();
         await driver.quit();                           
         await expect(titleAfterSearh).to.equal('wikipedia - Google Search');                  
+    });
+    it('should opens doodles page after click button "I"m Feeling Lucky"',async function(){                           
+        await driver.get('https://www.google.com/');                                 
+        await driver.findElement(By.css(".FPdoLc.lJ9FBc center .RNmpXc")).click();                        
+        let titleAfterSearh = await driver.getTitle();
+        await driver.quit();                           
+        await expect(titleAfterSearh).to.equal('Google Doodles');                  
     });
 
 });    
