@@ -54,5 +54,29 @@ describe("Google.com unit testing", function(){
         await driver.quit();                           
         await expect(titleAfterSearh).to.equal('Google Doodles');                  
     });
-
+    it('should opens img-search page after click link "Images"',async function(){                           
+        await driver.get('https://www.google.com/');                                 
+        await driver.findElement(By.linkText("Images")).click();                        
+        let titleAfterClick = await driver.getTitle();
+        await driver.quit();                           
+        await expect(titleAfterClick).to.equal('Google Images');                  
+    });
+    it('Img-search page should have special text "images" with logo ',async function(){
+        let result = {
+            visibleAtPage: null,
+            text: null,
+        }
+        let finalyResult = {
+            visibleAtPage: true,
+            text: "images",
+        }                          
+        await driver.get('https://www.google.com/imghp?hl=en&ogbl');                                 
+        let displaySpan = await driver.findElement(By.css("#hplogo .a9nkvf span")).isDisplayed();
+        let textIntoLink = await driver.findElement(By.css("#hplogo .a9nkvf span")).getText();
+        await (function resultAfterCheck(){
+            result.visibleAtPage = displaySpan;
+            result.text = textIntoLink;
+        })();                               
+        await expect(result).to.eql(finalyResult);                  
+    });
 });    
