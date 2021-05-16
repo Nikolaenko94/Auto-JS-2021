@@ -1,6 +1,7 @@
 const chai = require("chai");
 const spies = require("chai-spies");
 const { expect } = require("chai");
+const { Executor } = require("selenium-webdriver/http");
 chai.use(spies);
 const webdriver = require("selenium-webdriver"),
       By = webdriver.By,
@@ -35,6 +36,15 @@ describe("Google.com unit testing", function(){
         await driver.findElement(By.name("q")).sendKeys('wikipedia', Key.ENTER);        
         let titleAfterSearh = await driver.getTitle();
         await driver.quit()                           
+        await expect(titleAfterSearh).to.equal('wikipedia - Google Search');                  
+    });
+    it('should working search with press button "Google Search"',async function(){                     
+        await driver.get('https://www.google.ru/');                          
+        await driver.findElement(By.name("q")).sendKeys('wikipedia');        
+        await (await driver).sleep(500);        
+        await driver.findElement(By.name("btnK")).click();                        
+        let titleAfterSearh = await driver.getTitle();
+        await driver.quit();                           
         await expect(titleAfterSearh).to.equal('wikipedia - Google Search');                  
     });
 
