@@ -87,4 +87,16 @@ describe("Google.com unit testing", function(){
         await driver.quit();                           
         await expect(windowForSearchDisplayed).to.equal(true);                  
     });
+    
+    //New tests after lection webdriver Actions and Executors.
+    //This tests may be not needed for real project, but this tests give a chance training Actions and Executors methods 
+    it('should text "images" is blue for main logo for img-search page',async function(){                           
+        await driver.get('https://www.google.com/');                                 
+        let button = await driver.findElement(By.linkText("Images"));                        
+        await driver.actions().click(button).perform();                          
+        let text = await driver.findElement(By.css("#hplogo .a9nkvf"));
+        let colorText = await text.getCssValue("color");
+        await driver.quit();
+        await expect(colorText).to.equal("rgba(66, 133, 244, 1)");                 
+    });
 });    
