@@ -14,7 +14,7 @@ describe("Google.com unit testing", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
-        .setChromeOptions(new chrome.Options().addArguments('--lang=en-EN'))
+        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN'))
         .withCapabilities(webdriver.Capabilities.chrome())        
         .build();
     });                 
