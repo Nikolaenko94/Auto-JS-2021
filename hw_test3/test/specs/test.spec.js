@@ -14,7 +14,7 @@ describe("Google.com unit testing", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
-        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN'))
+        .setChromeOptions(new chrome.Options().addArguments('--lang=en-EN'))
         .withCapabilities(webdriver.Capabilities.chrome())        
         .build();
     });                 
@@ -90,34 +90,42 @@ describe("Google.com unit testing", function(){
     
     //New tests after lection webdriver Actions and Executors.
     //This tests may be not needed for real project, but this tests give a chance training Actions and Executors methods 
-    it('should been text "images" is blue for main logo for img-search page',async function(){                           
-        await driver.get('https://www.google.com/');                                 
-        let button = await driver.findElement(By.linkText("Images"));                        
-        await driver.actions().click(button).perform();                          
-        let text = await driver.findElement(By.css("#hplogo .a9nkvf"));
-        let colorText = await text.getCssValue("color");
+    // it('should been text "images" is blue for main logo for img-search page',async function(){                           
+    //     await driver.get('https://www.google.com/');                                 
+    //     let button = await driver.findElement(By.linkText("Images"));                        
+    //     await driver.actions().click(button).perform();                          
+    //     let text = await driver.findElement(By.css("#hplogo .a9nkvf"));
+    //     let colorText = await text.getCssValue("color");
+    //     await driver.quit();
+    //     await expect(colorText).to.equal("rgba(66, 133, 244, 1)");                 
+    // });
+    // it('should correctly displayed panel "content info" for search results page',async function(){                           
+    //     await driver.get('https://www.google.com/');                                 
+    //     let inputForText = await driver.findElement(By.name("q"));        
+    //     await driver.actions(inputForText).sendKeys("wikipedia",Key.ENTER).perform();
+    //     //the next step only to use the scroll method, I understand that this step is not needed for isDisplayed ()
+    //     await driver.executeScript('window.scrollTo(0, document.body.scrollHeight)');
+    //     let contentInfoDisplay = await driver.findElement(By.id("footcnt")).isDisplayed();
+    //     await driver.quit();
+    //     await expect(contentInfoDisplay).to.equal(true);              
+    // });
+    // it('should correctly working link "help" after opening the serch results page:',async function(){                           
+    //     await driver.get('https://www.google.com/');                                 
+    //     let inputForText = await driver.findElement(By.name("q"));        
+    //     await driver.actions(inputForText).sendKeys("wikipedia").keyDown(Key.ENTER).keyUp(Key.ENTER).perform();
+    //     let linkHelp = await driver.findElement(By.css('#fsl>a'));
+    //     await driver.executeScript('arguments[0].click()', linkHelp);
+    //     let title = await driver.executeScript('return document.title;');
+    //     await driver.quit();
+    //     await expect(title).to.equal("Google Search Help");              
+    // });
+    //google map
+    it('Google map should have start value for zoom = 50km ',async function(){                           
+        await driver.get('https://www.google.com/maps');
+        await (await driver).sleep(4000);
+        let zoomElement= await driver.executeScript('return document.getElementById("widget-scale-label").innerHTML ;')
         await driver.quit();
-        await expect(colorText).to.equal("rgba(66, 133, 244, 1)");                 
-    });
-    it('should correctly displayed panel "content info" for search results page',async function(){                           
-        await driver.get('https://www.google.com/');                                 
-        let inputForText = await driver.findElement(By.name("q"));        
-        await driver.actions(inputForText).sendKeys("wikipedia",Key.ENTER).perform();
-        //the next step only to use the scroll method, I understand that this step is not needed for isDisplayed ()
-        await driver.executeScript('window.scrollTo(0, document.body.scrollHeight)');
-        let contentInfoDisplay = await driver.findElement(By.id("footcnt")).isDisplayed();
-        await driver.quit();
-        await expect(contentInfoDisplay).to.equal(true);              
-    });
-    it('should correctly working link "help" after opening the serch results page:',async function(){                           
-        await driver.get('https://www.google.com/');                                 
-        let inputForText = await driver.findElement(By.name("q"));        
-        await driver.actions(inputForText).sendKeys("wikipedia").keyDown(Key.ENTER).keyUp(Key.ENTER).perform();
-        let linkHelp = await driver.findElement(By.css('#fsl>a'));
-        await driver.executeScript('arguments[0].click()', linkHelp);
-        let title = await driver.executeScript('return document.title;');
-        await driver.quit();
-        await expect(title).to.equal("Google Search Help");              
+        await expect(zoomElement).to.equal("50 km");
     });
     
 }); 
