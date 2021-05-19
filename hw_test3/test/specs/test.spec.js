@@ -112,12 +112,13 @@ describe("Google.com unit testing", function(){
     it('should correctly working link "help" after opening the serch results page:',async function(){                           
         await driver.get('https://www.google.com/');                                 
         let inputForText = await driver.findElement(By.name("q"));        
-        await driver.actions(inputForText).sendKeys("wikipedia",Key.ENTER).perform();
+        await driver.actions(inputForText).sendKeys("wikipedia").keyDown(Key.ENTER).keyUp(Key.ENTER).perform();
         let linkHelp = await driver.findElement(By.css('#fsl>a'));
         await driver.executeScript('arguments[0].click()', linkHelp);
         let title = await driver.executeScript('return document.title;');
         await driver.quit();
         await expect(title).to.equal("Google Search Help");              
     });
+    
 }); 
    
