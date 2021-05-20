@@ -14,7 +14,7 @@ describe("Google.com unit testing", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
-        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN'))
+        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN', '--window-size=1366,768'))
         .withCapabilities(webdriver.Capabilities.chrome())        
         .build();
     });                 
@@ -138,6 +138,19 @@ describe("Google.com unit testing", function(){
         await driver.quit();
         await expect(zoomElement).to.equal("20 km");
     });
-
+    it('The Street View Image should opens after drag and drop the icon "Browse Street View Image" ',async function(){                                   
+        await driver.get('https://www.google.com/maps');        
+        await (await driver).sleep(2000);
+        let inputForSearch = await driver.findElement(By.name("q"));        
+        await driver.actions(inputForSearch).sendKeys("minsk",Key.ENTER).perform();
+        await (await driver).sleep(5000);
+        let elementStreetView = await driver.findElement(By.id("runway-expand-button"));
+        await (await driver).sleep(5000);
+        await driver.actions().dragAndDrop(elementStreetView, {x:-650, y:-350}).perform();
+        await (await driver).sleep(2000);
+        let elementImgDownloadDataText = await driver.executeScript('return document.querySelector(".mapsTactileClientFineprint__fineprint-item.mapsTactileClientFineprint__fineprint-padded.fineprint-copyrights span span").innerHTML;');
+        await expect(elementImgDownloadDataText).to.include('Image capture');
+        await driver.quit();
+    });
 }); 
    
