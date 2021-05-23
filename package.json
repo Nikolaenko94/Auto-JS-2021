@@ -18,7 +18,8 @@
     "lint:fix": "npm run lint -- --fix",
     "commit": "cz",
     "prettier": "prettier -c hw8/**/*.js",
-    "unit": "mocha --config ./hw_test1/test/config/mocha.config.js"
+    "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
+    "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,9 @@
     "mochawesome": "^6.2.2",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "pretty-quick": "^3.1.0",
+    "protractor": "^7.0.0",
+    "webdriver-manager": "^12.1.8"
   },
   "config": {
     "commitizen": {
