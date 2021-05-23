@@ -11,7 +11,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-                args: ['--lang=es-ES']}       
+                args: ['--headless','--lang=en-EN']}       
     },
 
      baseUrl: 'https://google.com/',
