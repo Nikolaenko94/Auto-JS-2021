@@ -1,6 +1,4 @@
-const { browser } = require("protractor");
-
-exports.config = {
+exports.config = {   
 
     directConnect: true,
 
@@ -12,13 +10,15 @@ exports.config = {
 
     capabilities: {
         browserName: 'chrome',
-        platform: 'ANY',
-            'chromeOptions': {
-                'args': ['lang=es-ES']}       
+        chromeOptions: {
+                args: ['--lang=es-ES']}       
     },
 
-    onPrepare: function(){
-        browser.driver.manage().window().setSize(1366,768);
+     baseUrl: 'https://google.com/',
+
+    onPrepare:async function(){
+        await browser.waitForAngularEnabled(false);
+        await browser.manage().window().setSize(1366,768);
     },
 
     mochaOpts: {

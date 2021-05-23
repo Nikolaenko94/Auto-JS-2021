@@ -1,10 +1,10 @@
 const {browser} = require("protractor");
 
 class BasePage {
-    get pageTitle(){
+    static pageTitle(){
         return browser.getTitle();
     };
-    get currentUrl(){
+    static currentUrl(){
         return browser.getCurrentUrl();
     }
 };
