@@ -21,7 +21,7 @@ exports.config = {
     cucumberOpts: {
         require: [resolve("./hw_test5/build/step_definitions/**/*.js"), resolve("./hw_test5/build/support/**/*.js")],
         format: [`json:${reportsDir}/report.json`],
-        tags: ['@compatibility','@mainSearch'],
+        tags: '(@compatibility or @mainSearch)',
     },
 
     onPrepare: async function(){
