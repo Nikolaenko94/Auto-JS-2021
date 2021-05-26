@@ -19,8 +19,10 @@
     "commit": "cz",
     "prettier": "prettier -c hw8/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
+    "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
+     "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
-    "webdriver-update": "webdriver-manager update"
+    "webdriver-update": "webdriver-manager update"   
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,7 @@
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.3.4",
     "chai-spies": "^1.0.0",
+    "chromedriver": "^90.0.0",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.24.0",
     "husky": "^6.0.0",
@@ -52,7 +55,8 @@
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "protractor": "^7.0.0"
+    "protractor": "^7.0.0",
+    "selenium-webdriver": "^4.0.0-beta.3"
   },
   "config": {
     "commitizen": {
