@@ -19,6 +19,7 @@
     "commit": "cz",
     "prettier": "prettier -c hw8/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
+    "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js"
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js"
   },
   "repository": {
