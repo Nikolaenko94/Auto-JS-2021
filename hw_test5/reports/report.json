@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3600000000
+              "duration": 1762000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 9000000
             }
           },
           {
@@ -40,7 +40,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 13000000
             }
           }
         ],
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2173000000
+              "duration": 1899000000
             }
           },
           {
@@ -98,7 +98,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 13000000
             }
           },
           {
@@ -135,7 +135,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1712000000
+              "duration": 2658000000
             }
           },
           {
@@ -148,7 +148,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 16000000
             }
           },
           {
@@ -156,7 +156,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 24000000
             }
           }
         ],
@@ -180,5 +180,121 @@
       }
     ],
     "uri": "..\\features\\mainSearch.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "summ-for-calculator-online;should-correctly-work-summ-for-calculator-into-https://www.calculator.net/",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "should correctly work summ for calculator into https://www.calculator.net/",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Enter and summ 0 and 0",
+            "match": {
+              "location": "..\\features\\step_definitions\\outlineScenario.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Correctly summ value = 0",
+            "match": {
+              "location": "..\\features\\step_definitions\\outlineScenario.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1081000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@outlineScenario",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "summ-for-calculator-online;should-correctly-work-summ-for-calculator-into-https://www.calculator.net/",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "should correctly work summ for calculator into https://www.calculator.net/",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Enter and summ 1 and 1",
+            "match": {
+              "location": "..\\features\\step_definitions\\outlineScenario.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Correctly summ value = 2",
+            "match": {
+              "location": "..\\features\\step_definitions\\outlineScenario.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1068000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@outlineScenario",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "summ-for-calculator-online",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Summ for calculator-online",
+    "tags": [
+      {
+        "name": "@outlineScenario",
+        "line": 1
+      }
+    ],
+    "uri": "..\\features\\outlineScenario.feature"
   }
 ]
