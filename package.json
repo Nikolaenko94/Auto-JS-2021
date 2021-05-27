@@ -26,7 +26,8 @@
     "cucumber1": "cucumber-js",
     "unit5": "protractor ./hw_test5/config/protractor.config.js --disableChecks",
     "TAGS_COMPATIBILITY": "protractor ./hw_test5/config/@compatibility.config.js --disableChecks",
-    "TAGS_MAINSEARCH": "protractor ./hw_test5/config/@mainSearch.config.js --disableChecks"
+    "TAGS_MAINSEARCH": "protractor ./hw_test5/config/@mainSearch.config.js --disableChecks",
+    "TAGS_OUTLINESCENARIO": "protractor ./hw_test5/config/@outlineScenario.config.js --disableChecks"
   },
   "repository": {
     "type": "git",

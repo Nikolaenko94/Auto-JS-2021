@@ -4,35 +4,35 @@
     "elements": [
       {
         "description": "",
-        "id": "main-search;should-correctly-work-main-search-into-www.google.com",
+        "id": "summ-for-calculator-online;should-correctly-work-summ-for-calculator-into-https://www.calculator.net/",
         "keyword": "Scenario",
         "line": 4,
-        "name": "should correctly work main-search into www.google.com",
+        "name": "should correctly work summ for calculator into https://www.calculator.net/",
         "steps": [
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "Enter a valid query in the search with key 'Enter'",
+            "name": "Enter and summ 0 and 0",
             "match": {
-              "location": "..\\features\\step_definitions\\mainSearch.js:10"
+              "location": "..\\features\\step_definitions\\outlineScenario.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 8627000000
+              "duration": 3821000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "Google search page with query results correctly open",
+            "name": "Correctly summ value = 0",
             "match": {
-              "location": "..\\features\\step_definitions\\mainSearch.js:15"
+              "location": "..\\features\\step_definitions\\outlineScenario.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 1048000000
             }
           },
           {
@@ -40,13 +40,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 16000000
             }
           }
         ],
         "tags": [
           {
-            "name": "@mainSearch",
+            "name": "@outlineScenario",
             "line": 1
           }
         ],
@@ -54,35 +54,35 @@
       },
       {
         "description": "",
-        "id": "main-search;should-working-search-with-press-button-\"google-search\"",
+        "id": "summ-for-calculator-online;should-correctly-work-summ-for-calculator-into-https://www.calculator.net/",
         "keyword": "Scenario",
-        "line": 8,
-        "name": "should working search with press button \"Google Search\"",
+        "line": 4,
+        "name": "should correctly work summ for calculator into https://www.calculator.net/",
         "steps": [
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 9,
-            "name": "Enter a valid query in the search and click button 'Google Search'",
+            "line": 5,
+            "name": "Enter and summ 1 and 1",
             "match": {
-              "location": "..\\features\\step_definitions\\mainSearch.js:20"
+              "location": "..\\features\\step_definitions\\outlineScenario.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1948000000
+              "duration": 2437000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "Google search page with query results correctly open",
+            "line": 6,
+            "name": "Correctly summ value = 2",
             "match": {
-              "location": "..\\features\\step_definitions\\mainSearch.js:15"
+              "location": "..\\features\\step_definitions\\outlineScenario.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 1042000000
             }
           },
           {
@@ -90,29 +90,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 15000000
             }
           }
         ],
         "tags": [
           {
-            "name": "@mainSearch",
+            "name": "@outlineScenario",
             "line": 1
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "main-search",
+    "id": "summ-for-calculator-online",
     "line": 2,
     "keyword": "Feature",
-    "name": "Main Search",
+    "name": "Summ for calculator-online",
     "tags": [
       {
-        "name": "@mainSearch",
+        "name": "@outlineScenario",
         "line": 1
       }
     ],
-    "uri": "..\\features\\mainSearch.feature"
+    "uri": "..\\features\\outlineScenario.feature"
   }
 ]
