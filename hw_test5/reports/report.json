@@ -4,6 +4,212 @@
     "elements": [
       {
         "description": "",
+        "id": "compatibility;should-open-www.google.com-correctly",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "should open www.google.com correctly",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Opens www.google.com with Chrome",
+            "match": {
+              "location": "..\\features\\step_definitions\\compatibility.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3557000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Website correctly open on Chrome browser",
+            "match": {
+              "location": "..\\features\\step_definitions\\compatibility.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@compatibility",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "compatibility",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "compatibility",
+    "tags": [
+      {
+        "name": "@compatibility",
+        "line": 1
+      }
+    ],
+    "uri": "..\\features\\compatibility.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "main-search;should-correctly-work-main-search-into-www.google.com",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "should correctly work main-search into www.google.com",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Enter a valid query in the search with key 'Enter'",
+            "match": {
+              "location": "..\\features\\step_definitions\\mainSearch.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1754000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Google search page with query results correctly open",
+            "match": {
+              "location": "..\\features\\step_definitions\\mainSearch.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mainSearch",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "main-search;should-working-search-with-press-button-\"google-search\"",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "should working search with press button \"Google Search\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter a valid query in the search and click button 'Google Search'",
+            "match": {
+              "location": "..\\features\\step_definitions\\mainSearch.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1684000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Google search page with query results correctly open",
+            "match": {
+              "location": "..\\features\\step_definitions\\mainSearch.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mainSearch",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "main-search",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Main Search",
+    "tags": [
+      {
+        "name": "@mainSearch",
+        "line": 1
+      }
+    ],
+    "uri": "..\\features\\mainSearch.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "summ-for-calculator-online;should-correctly-work-summ-for-calculator-into-https://www.calculator.net/",
         "keyword": "Scenario",
         "line": 4,
@@ -19,7 +225,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3821000000
+              "duration": 3043000000
             }
           },
           {
@@ -32,7 +238,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1048000000
+              "duration": 1041000000
             }
           },
           {
@@ -40,7 +246,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22000000
             }
           }
         ],
@@ -69,7 +283,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2437000000
+              "duration": 2224000000
             }
           },
           {
@@ -82,7 +296,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1042000000
+              "duration": 1040000000
             }
           },
           {
@@ -90,7 +304,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 15000000
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 20000000
             }
           }
         ],
