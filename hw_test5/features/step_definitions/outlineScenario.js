@@ -1,7 +1,6 @@
 const {Then, When, setDefaultTimeout} = require("cucumber");
 const {browser, Key, element} = require("protractor");
 const {expect} = require("chai");
-const EC = browser.ExpectedConditions;
 setDefaultTimeout(240 * 1000);
 
 When('Enter and summ {int} and {int}', async (int, int2) =>{
