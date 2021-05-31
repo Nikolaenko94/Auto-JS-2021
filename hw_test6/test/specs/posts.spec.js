@@ -31,7 +31,7 @@ describe("[GET] POSTS", function(){
     });
 });
 describe("[POST] POSTS", function(){
-    it('should return success status [200, "OK"]',async function(){
+    it('should return success status [201, "Created"]',async function(){
         //arrange
         const URL = 'https://jsonplaceholder.typicode.com/posts';
         //act
