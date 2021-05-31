@@ -13,7 +13,7 @@ describe("[GET]ALBUMS", function(){
         await expect([result.status,result.statusText]).to.eql([200, "OK"]);                           
                         
     });
-    it('should return data length (count albums)',async function(){
+    it('should return data length (count albums = 100)',async function(){
         //arrange
         const URL = 'https://jsonplaceholder.typicode.com/albums';
         //act
@@ -37,7 +37,7 @@ describe("[GET]ALBUMS", function(){
         //act
         const result = await axios.get(URL);
         //assert                          
-        await expect(Object.keys(result.headers).length).to.eql(25);          
+        await expect(Object.keys(result.headers).length).to.equal(25);          
     });
 });
 
