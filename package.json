@@ -20,9 +20,9 @@
     "prettier": "prettier -c hw8/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
-     "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
+    "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
-    "webdriver-update": "webdriver-manager update"   
+    "webdriver-update": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "axios": "^0.21.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
