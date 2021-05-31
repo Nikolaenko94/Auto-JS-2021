@@ -5,5 +5,5 @@ module.exports = {
     reporter: "mochawesome",
     timeout: 30000,
     ui: "bdd",
-    spec: "hw_test6/test/specs/posts.spec.js"
+    spec: "hw_test6/test/specs/albums.spec.js"
 }

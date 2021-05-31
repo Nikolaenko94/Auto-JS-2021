@@ -11,7 +11,7 @@ const webdriver = require("selenium-webdriver"),
       chrome = require("selenium-webdriver/chrome"),
       path = require("chromedriver").path;
        
-describe("Posts API testing", function(){
+describe("[GET]ALBUMS", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
@@ -23,9 +23,13 @@ describe("Posts API testing", function(){
         driver.quit()
     }) 
     it('',async function(){                          
-        //arrange
-        //act
-        //assert                          
-        await expect().to.equal();                 
+        it('should return success status [200, "OK"]',async function(){
+            //arrange
+            const URL = 'https://jsonplaceholder.typicode.com/albums';
+            //act
+            const result = await axios.get(URL);
+            //assert                          
+            await expect([result.status,result.statusText]).to.eql([200, "OK"]);          
+        });                 
     });
 });
