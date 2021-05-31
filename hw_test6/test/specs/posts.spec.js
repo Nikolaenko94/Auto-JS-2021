@@ -38,5 +38,14 @@ describe("[GET] POSTS", function(){
         //assert                          
         await expect(result.data.length).to.equal(100);          
     });
-   
+    it('should return keys for user data',async function(){
+        //arrange
+        const URL = 'https://jsonplaceholder.typicode.com/posts';
+        const keys = ['userId', 'id', 'title', 'body'];
+        //act
+        const result = await axios.get(URL);
+        const user = result.data[0];
+        //assert                          
+        await expect(Object.keys(user)).to.eql(keys);          
+    });
 });
