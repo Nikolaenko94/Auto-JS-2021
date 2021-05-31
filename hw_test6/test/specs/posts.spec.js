@@ -11,7 +11,7 @@ const webdriver = require("selenium-webdriver"),
       chrome = require("selenium-webdriver/chrome"),
       path = require("chromedriver").path;
        
-describe("Posts API testing", function(){
+describe("[GET] POSTS", function(){
     let driver;
     beforeEach(()=>{
         driver = new webdriver.Builder()
@@ -30,4 +30,13 @@ describe("Posts API testing", function(){
         //assert                          
         await expect([result.status,result.statusText]).to.eql([200, "OK"]);          
     });
+    it('should return data length',async function(){
+        //arrange
+        const URL = 'https://jsonplaceholder.typicode.com/posts';
+        //act
+        const result = await axios.get(URL);
+        //assert                          
+        await expect(result.data.length).to.equal(100);          
+    });
+   
 });
