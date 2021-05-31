@@ -49,3 +49,23 @@ describe("[GET] POSTS", function(){
         await expect(Object.keys(user)).to.eql(keys);          
     });
 });
+describe("[POST] POSTS", function(){
+    let driver;
+    beforeEach(()=>{
+        driver = new webdriver.Builder()
+        .setChromeOptions(new chrome.Options().headless().addArguments('--lang=en-EN', '--window-size=1366,768'))
+        .withCapabilities(webdriver.Capabilities.chrome())        
+        .build();
+    });                 
+    afterEach(()=>{
+        driver.quit()
+    }) 
+    it('should return success status [200, "OK"]',async function(){
+        //arrange
+        const URL = 'https://jsonplaceholder.typicode.com/posts';
+        //act
+        const result = await axios.post(URL);
+        //assert                          
+        await expect([result.status,result.statusText]).to.eql([201, "Created"]);       
+    });
+});
