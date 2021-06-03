@@ -32,9 +32,9 @@ describe("Img-search for google.com unit-testing", function(){
     });
     it('should appears special window for searching by image after press button "Search by image" ',async function(){                           
         await browser.get('https://www.google.com/imghp?hl=en&ogbl');
-        await browser.wait(EC.elementToBeClickable(element(by.xpath("//*[@class='LM8x9c']"))), 5000);
+        await browser.wait(EC.elementToBeClickable(element(by.xpath("//*[@class='LM8x9c']"))), 7000);
         await element(by.xpath("//*[@class='LM8x9c']")).click();
-        let windowForSearchDisplayed = await browser.wait(EC.visibilityOf(element(by.id('QDMvGf'))), 5000);
+        let windowForSearchDisplayed = await browser.wait(EC.visibilityOf(element(by.id('QDMvGf'))), 7000);
         await expect(windowForSearchDisplayed).to.equal(true);                 
     });
     it('should been text "images" is blue for main logo for img-search page',async function(){                           
