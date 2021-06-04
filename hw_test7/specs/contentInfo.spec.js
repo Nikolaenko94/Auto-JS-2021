@@ -1,5 +1,4 @@
 const {browser, Key} = require("protractor");
-const {expect} = require("chai");
 const BasePage = require("../pages/base-page");
 const EC = browser.ExpectedConditions;
 
@@ -11,7 +10,7 @@ describe("Content Info for google.com unit-testing", function(){
         await browser.executeScript('window.scrollTo(0, document.body.scrollHeight)');
         await browser.wait(EC.visibilityOf(element(by.id('footcnt'))), 5000);
         let contentInfoDisplay = await element(by.id('footcnt')).isDisplayed();
-        await expect(contentInfoDisplay).to.equal(true);              
+        await expect(contentInfoDisplay).toBe(true);              
     });
     it('should correctly working link "help" after opening the serch results page:',async function(){                           
         await browser.get('https://www.google.com/');                                 
@@ -21,6 +20,6 @@ describe("Content Info for google.com unit-testing", function(){
         let linkHelp = await element(by.css('#fsl>a'));
         await browser.executeScript('arguments[0].click()', linkHelp);
         let title = await BasePage.pageTitle();
-        await expect(title).to.equal("Google Search Help");              
+        await expect(title).toBe("Google Search Help");              
     });
 });

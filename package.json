@@ -20,7 +20,7 @@
     "prettier": "prettier -c hw8/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
-     "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
+    "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
     "webdriver-update": "webdriver-manager update",
     "unit7": "protractor ./hw_test7/config/protractor.config.js --disableChecks"
@@ -57,6 +57,7 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "protractor": "^7.0.0",
+    "protractor-jasmine2-html-reporter": "0.0.7",
     "selenium-webdriver": "^4.0.0-beta.3"
   },
   "config": {

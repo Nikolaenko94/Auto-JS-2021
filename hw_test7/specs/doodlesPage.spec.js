@@ -1,5 +1,4 @@
 const {browser, Key} = require("protractor");
-const {expect} = require("chai");
 const BasePage = require("../pages/base-page");
 const EC = browser.ExpectedConditions;
 
@@ -9,6 +8,6 @@ describe("Doodles page for google.com unit-testing", function(){
         await browser.wait(EC.elementToBeClickable(element(by.css('.FPdoLc.lJ9FBc center .RNmpXc'))), 5000);
         await element(by.css('.FPdoLc.lJ9FBc center .RNmpXc')).click();         
         let titleAfterSearch = await BasePage.pageTitle();
-        await expect(titleAfterSearch).to.equal('Google Doodles');                 
+        await expect(titleAfterSearch).toBe('Google Doodles');                 
     });
 });
