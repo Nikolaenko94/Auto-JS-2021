@@ -7,7 +7,7 @@ exports.config = {
     framework: 'jasmine2',
 
     specs: [
-        '../specs/*.js'
+        '../specs/*.spec.js'
     ],
 
     capabilities: {
@@ -22,9 +22,9 @@ exports.config = {
         jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
         consolidateAll: true,
         savePath: './hw_test7/reports/',
-        fileNamePrefix: 'google.com'
+        fileNamePrefix: 'google.com',
         })),
         browser.waitForAngularEnabled(false);
-        browser.manage().window().setSize(1366,768);
-    },    
+        browser.manage().window().setSize(1366,768);          
+    },      
 };
