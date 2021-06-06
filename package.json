@@ -24,7 +24,7 @@
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
      "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
-    "webdriver-update": "webdriver-manager update"   
+    "webdriver-update": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
