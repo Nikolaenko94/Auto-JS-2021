@@ -3,5 +3,6 @@ package-lock.json
 .vscode
 es2015
 babel_files
+info.js
 mochawesome-report
 
