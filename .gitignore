@@ -5,4 +5,6 @@ es2015
 babel_files
 info.js
 mochawesome-report
-
+report.json
+report.html
+reports
