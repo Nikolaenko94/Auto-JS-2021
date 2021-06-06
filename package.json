@@ -19,12 +19,12 @@
     "lint": "eslint hw8/**",
     "lint:fix": "npm run lint -- --fix",
     "commit": "cz",
-    "prettier": "prettier -c hw9/**/*.js"
+    "prettier": "prettier -c hw9/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
      "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
-    "webdriver-update": "webdriver-manager update"   
+    "webdriver-update": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -59,7 +59,7 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "ts-jest": "^26.5.5",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
     "protractor": "^7.0.0",
     "selenium-webdriver": "^4.0.0-beta.3"
   },

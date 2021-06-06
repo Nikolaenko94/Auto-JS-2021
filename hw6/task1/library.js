@@ -1,29 +1,14 @@
 const { setImmediate, setInterval } = require('timers');
-<<<<<<< HEAD:hw6/task1/library.js
 const EventEmitter = require('events');
 const Track = require('./track');
 const Album = require('./album');
 const Artist = require('./artist')
 class Library{    
-=======
-const repl = require('repl'); 
-class Library{        
->>>>>>> 7382dbbcd7cfd5a2b4ad90eaf1261bef3891c61a:hw7/task2/library.js
     Track = [];
     Album = [];
     Artist = [];
-    //singlton realization fir Library
-    constructor(){
-        if(Library._instance){
-            return Library._instance
-        }
-        Library._instance = this;
-    }
-    static getInstance() {
-        return Library._instance;
-    }     
  // ADD METHOD WITH NESTINGS   
-    add(...args){        
+    add(...args){ 
     //    value.constuctor.name; - return Class name "Track,Artist,Album";
     //    value.name - return class.name "Linkin park exemple";
     // IF :for classes! if one value - this CLASS. if more value: first - Class, nexts - parameters this Class;
@@ -138,13 +123,7 @@ class Library{
     }
     
 //PLAY METHOD
-<<<<<<< HEAD:hw6/task1/library.js
     play(){        
-=======
-    play(){ 
-        
-        const EventEmitter = require('events');
->>>>>>> 7382dbbcd7cfd5a2b4ad90eaf1261bef3891c61a:hw7/task2/library.js
         const player = new EventEmitter();              
         let current = 0; 
         let myTracks = this.Track;
@@ -157,7 +136,7 @@ class Library{
             else{
                 current++;                            
             }   
-                    
+                       
         })};
         //EventEmitter prev()    
         this.prevTrack = function(){player.on('prev', ()=>{
@@ -167,7 +146,7 @@ class Library{
             else{
                 current--;                            
             }   
-                    
+                       
         })};
         //EventEmitter pause()
         this.pauseTrack = function(){player.on('pause', ()=>{
@@ -191,23 +170,16 @@ class Library{
         mainInterval.ref();        
         //END EMITATION
         console.log("Play");
-<<<<<<< HEAD:hw6/task1/library.js
         console.log(myTracks[current].name)
-=======
-        console.log(`${myTracks[current].name}, Duration: ${myTracks[current].seconds}`);
->>>>>>> 7382dbbcd7cfd5a2b4ad90eaf1261bef3891c61a:hw7/task2/library.js
         return strInfo;
     };
     next(){
-        repl.start('Next music').context.next = this.nextTrack();
         this.nextTrack();
     };
     prev(){
-        repl.start('Prev music').context.prev = this.prevTrack();
         this.prevTrack();
     };
     pause(){
-        repl.start('Pause music').context.stop = this.pauseTrack();
         this.pauseTrack();
     };
     search(value){
