@@ -9,7 +9,7 @@ function rabbitsBusiness(totalRabbits,totalMonth){
             totalRabbitsNumber= totalRabbitsNumber - (totalRabbitsNumber * 50 / 100);
         } else if(totalRabbits > 100){
             totalRabbitsNumber = totalRabbitsNumber - (totalRabbitsNumber * 20 / 100);
-        };
+        }
         totalRabbitsNumber+=20;
         totalEveryMonth.push(monthArray[i] + ` - ${Math.floor(totalRabbitsNumber)} rabbits`);
         totalRabbitsNumber = Math.floor(totalRabbitsNumber);
@@ -17,7 +17,7 @@ function rabbitsBusiness(totalRabbits,totalMonth){
     
     let returnVarriable = String(totalRabbitsNumber) + " - total rabbits" + `\n` + totalEveryMonth.join();
     return returnVarriable;
-};
+}
 
 //EXPORT function rabbitsBusiness() => use into ../index.js
 module.exports = rabbitsBusiness;

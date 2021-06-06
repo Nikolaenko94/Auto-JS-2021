@@ -23,20 +23,20 @@ let funcInput = myInput.on('data', (value)=>{
     arrInputValue.forEach(element => {
         if(element.includes('+')){
             let arr = element.split(' ');    
-            result.result.emit('result', emitter.emit('plus', arr[0],arr[1]));           
-        };
+            result.result.emit('result', emitter.emit('plus', arr[0],arr[1]));
+        }
         if(element.includes('-')){
             let arr = element.split(' ');            
             result.result.emit('result', emitter.emit('minus', arr[0],arr[1]));           
-        };        
+        }        
         if(element.includes('/')){
             let arr = element.split(' ');            
             result.result.emit('result', emitter.emit('devide', arr[0],arr[1]));            
-        };
+        }
         if(element.includes('*')){
             let arr = element.split(' ');            
             result.result.emit('result', emitter.emit('multiplication', arr[0],arr[1]));             
-        };
+        }
     });     
      
 });
