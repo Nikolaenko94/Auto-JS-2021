@@ -18,14 +18,15 @@ function setPromise(){
         console.log("I replace loading symbols")  
         clearInterval(myTime)    
     }, 2500))
-}
+};
 const sleep = ms => {
     return new Promise(resolve => {
         setTimeout(() => resolve(), ms);
     })
-}
+};
 
 let myPromise = function(){
    return Promise.all([setPromise(), sleep(3500)])
-}
+};
+
 module.exports = myPromise;      
