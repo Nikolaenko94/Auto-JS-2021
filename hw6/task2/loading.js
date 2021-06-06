@@ -1,4 +1,4 @@
-function myPromise(){
+function setPromise(){
     return new Promise((resolve, reject) => {
         let i =0 ;
         let myTime = setInterval(() => {
@@ -19,7 +19,13 @@ function myPromise(){
         clearInterval(myTime)    
     }, 2500))
 }
+const sleep = ms => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), ms);
+    })
+}
 
-module.exports = {
-    myPromise       
-};
+let myPromise = function(){
+   return Promise.all([setPromise(), sleep(3500)])
+}
+module.exports = myPromise;      

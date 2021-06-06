@@ -4,7 +4,7 @@ const track = require("./task1/track");
 const artist = require("./task1/artist");
 const Library = require("./task1/library");
 // import task 2
-const loading = require('./task2/loading');
+const myPromise = require('./task2/loading');
 
 //usage ./task1/task 1
 console.log("======================TASK 1========================");
@@ -29,16 +29,16 @@ library.add(InTheEnd);
 library.add(Papercut);
 library.add(newTrack);
 library.add(newTrack2);
-console.log(library.search("In the End"));
-setTimeout(() => {
-    library.next();
-    library.next();  
-}, 1500);
-library.play()
+// console.log(library.search("In the End"));
+// setTimeout(() => {
+//     library.next();
+//     library.next();  
+// }, 1500);
+// library.play()
 
 //usage task 2
 console.log("======================TASK 2========================");
 //setTimeout for showing task1 
-// setTimeout(() => {
-//     loading.myPromise()
-// }, 1000);
+setTimeout(() => {
+    myPromise().then(() => console.log('All done'))
+}, 1000);
