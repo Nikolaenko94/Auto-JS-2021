@@ -25,6 +25,7 @@
     "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
     "webdriver-update": "webdriver-manager update",
+    "api1": "mocha --config ./hw_test6/test/config/mocha.config.js",
     "cucumber1": "cucumber-js",
     "unit5": "protractor ./hw_test5/config/protractor.config.js --disableChecks",
     "TAGS_COMPATIBILITY": "protractor ./hw_test5/config/@compatibility.config.js --disableChecks",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "axios": "^0.21.1",
     "@cucumber/cucumber": "^7.2.1",
     "@types/jest": "^26.0.22",
     "babel-cli": "^6.26.0",
