@@ -50,9 +50,3 @@ test('minus. If have setTimeot 1400 ',()=>{
     minus.minus();   
     expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1400);    
 });
-//result-function tests
-
-//func-input (calculatr) -For main function tests
-test('func-input. Check defaultEncoding = utf8 ',()=>{        
-    expect(funcInput.funcInput.defaultEncoding).toBe('utf8');    
-});

@@ -13,17 +13,25 @@
     "hw6": "node ./hw6/index.js",
     "hw7": "node ./hw7/index.js",
     "hw8": "node ./hw8/index.js",
+    "hw9": "node ./hw9/tsBuild/index.js",
+    "hw9:build": "npx tsc",
     "babel": "babel",
     "lint": "eslint hw8/**",
     "lint:fix": "npm run lint -- --fix",
     "commit": "cz",
-    "prettier": "prettier -c hw8/**/*.js",
+    "prettier": "prettier -c hw9/**/*.js",
     "unit": "mocha --config ./hw_test1/test/config/mocha.config.js",
     "unit2": "mocha --config ./hw_test2/test/config/mocha.config.js",
     "unit3": "mocha --config ./hw_test3/test/config/mocha.config.js",
     "unit4": "protractor ./hw_test4/config/protractor.config.js --disableChecks",
     "webdriver-update": "webdriver-manager update",
-    "api1": "mocha --config ./hw_test6/test/config/mocha.config.js"
+    "api1": "mocha --config ./hw_test6/test/config/mocha.config.js",
+    "cucumber1": "cucumber-js",
+    "unit5": "protractor ./hw_test5/config/protractor.config.js --disableChecks",
+    "TAGS_COMPATIBILITY": "protractor ./hw_test5/config/@compatibility.config.js --disableChecks",
+    "TAGS_MAINSEARCH": "protractor ./hw_test5/config/@mainSearch.config.js --disableChecks",
+    "TAGS_OUTLINESCENARIO": "protractor ./hw_test5/config/@outlineScenario.config.js --disableChecks",
+    "gulp-start": "gulp cucumberReports"
   },
   "repository": {
     "type": "git",
@@ -40,6 +48,8 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "axios": "^0.21.1",
+    "@cucumber/cucumber": "^7.2.1",
+    "@types/jest": "^26.0.22",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -47,8 +57,12 @@
     "chai": "^4.3.4",
     "chai-spies": "^1.0.0",
     "chromedriver": "^90.0.0",
+    "cucumber-html-report": "^0.6.5",
+    "cucumber-html-reporter": "^2.0.3",
+    "cucumber-pretty": "^6.0.0",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.24.0",
+    "gulp": "^4.0.2",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
@@ -57,7 +71,11 @@
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4",
     "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^8.1.0",
+    "protractor-cucumber-junit": "latest",
     "selenium-webdriver": "^4.0.0-beta.3"
   },
   "config": {
@@ -78,7 +96,12 @@
         "npm run lint:fix",
         "git add"
       ]
+    },
+    "jest": {
+      "preset":"ts-jest"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "cucumber": "^7.0.0-rc.0"
+  }
 }
